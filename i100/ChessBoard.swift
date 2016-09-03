@@ -33,15 +33,16 @@ struct ChessBoard {
     
     var lastCell:Int?
     
-    func value(at cell: Int) -> CellType {
+    func value(at cell: Int) throws -> CellType {
         if cell < 0 || cell > maxCell {
-            return .Out
+            throw ChessBoardError.Out
         }
         return matrix[cell]!
     }
     
     mutating func setCell(at index:Int) throws {
-        switch value(at: index) {
+        let value = try self.value(at: index)
+        switch value {
         case .Out:
             throw ChessBoardError.Out
         case .Full:

@@ -30,22 +30,37 @@ class chessBoardTests: XCTestCase {
         XCTAssertNotNil(chessBoard)
         
         let _ = (0..<100).map { (idx) in
-            XCTAssert(chessBoard.value(at: idx) == .Empty)
+            do {
+                let value = try chessBoard.value(at: idx)
+                XCTAssertEqual(value, .Empty)
+            } catch ChessBoardError.Out {
+                XCTFail("Out of the chessboard")
+            } catch {
+                XCTFail()
+            }
         }
         
         XCTAssertNil(chessBoard.lastCell)
     }
     
     func testSelectCell() {
-        XCTAssert(chessBoard?.value(at: 1000) == .Out)
-        XCTAssert(chessBoard?.value(at: -1) == .Out)
-        XCTAssert(chessBoard?.value(at: 0) == .Empty)
+        let idx = 0
+        do {
+            let value = try chessBoard?.value(at: idx)
+            XCTAssertEqual(value, .Empty)
+        } catch ChessBoardError.Out {
+            XCTFail("Out of the chessboard")
+        } catch {
+            XCTFail()
+        }
     }
     
     func testSetCell() {
         let idx = 1
         do {
             try chessBoard?.setCell(at: idx)
+             let value = try chessBoard?.value(at: idx)
+            XCTAssertEqual(value, .Full)
         } catch ChessBoardError.Out {
             XCTFail("Out of the chessboard")
             
@@ -54,8 +69,6 @@ class chessBoardTests: XCTestCase {
         } catch {
             XCTFail()
         }
-        
-        XCTAssertEqual(chessBoard?.value(at: idx), .Full)
     }
     
     func testPerformanceExample() {
