@@ -22,6 +22,10 @@
 		D978B2D41D7AC72200EC5301 /* Chessboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978B2D11D7AC72200EC5301 /* Chessboard+Extension.swift */; };
 		D978B2D51D7AC7FC00EC5301 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978B2A21D7AC56C00EC5301 /* ViewController.swift */; };
 		D978B2D61D7AC7FC00EC5301 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978B2A21D7AC56C00EC5301 /* ViewController.swift */; };
+		D9A5DAB61D7B77A7007DAF93 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5DAB51D7B77A7007DAF93 /* GameService.swift */; };
+		D9A5DAB71D7B77A7007DAF93 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5DAB51D7B77A7007DAF93 /* GameService.swift */; };
+		D9A5DAB81D7B77A7007DAF93 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5DAB51D7B77A7007DAF93 /* GameService.swift */; };
+		D9A5DABA1D7B77C6007DAF93 /* gameServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5DAB91D7B77C6007DAF93 /* gameServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,8 @@
 		D978B2C01D7AC56C00EC5301 /* i100UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i100UITests.swift; sourceTree = "<group>"; };
 		D978B2C21D7AC56C00EC5301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D978B2D11D7AC72200EC5301 /* Chessboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Chessboard+Extension.swift"; sourceTree = "<group>"; };
+		D9A5DAB51D7B77A7007DAF93 /* GameService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
+		D9A5DAB91D7B77C6007DAF93 /* gameServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				D96CB7F01D7B10E4008109E4 /* ChessBoard.swift */,
+				D9A5DAB51D7B77A7007DAF93 /* GameService.swift */,
 			);
 			name = "Model Layer";
 			sourceTree = "<group>";
@@ -129,6 +136,7 @@
 		D978B2B41D7AC56C00EC5301 /* i100Tests */ = {
 			isa = PBXGroup;
 			children = (
+				D9A5DAB91D7B77C6007DAF93 /* gameServiceTests.swift */,
 				D978B2B51D7AC56C00EC5301 /* chessBoardTests.swift */,
 				D978B2B71D7AC56C00EC5301 /* Info.plist */,
 			);
@@ -308,6 +316,7 @@
 			files = (
 				D978B2A31D7AC56C00EC5301 /* ViewController.swift in Sources */,
 				D96CB7F11D7B10E4008109E4 /* ChessBoard.swift in Sources */,
+				D9A5DAB61D7B77A7007DAF93 /* GameService.swift in Sources */,
 				D978B2A11D7AC56C00EC5301 /* AppDelegate.swift in Sources */,
 				D978B2D21D7AC72200EC5301 /* Chessboard+Extension.swift in Sources */,
 			);
@@ -319,6 +328,8 @@
 			files = (
 				D978B2D51D7AC7FC00EC5301 /* ViewController.swift in Sources */,
 				D96CB7F21D7B1103008109E4 /* ChessBoard.swift in Sources */,
+				D9A5DAB71D7B77A7007DAF93 /* GameService.swift in Sources */,
+				D9A5DABA1D7B77C6007DAF93 /* gameServiceTests.swift in Sources */,
 				D978B2B61D7AC56C00EC5301 /* chessBoardTests.swift in Sources */,
 				D978B2D31D7AC72200EC5301 /* Chessboard+Extension.swift in Sources */,
 			);
@@ -330,6 +341,7 @@
 			files = (
 				D978B2D61D7AC7FC00EC5301 /* ViewController.swift in Sources */,
 				D96CB7F31D7B1104008109E4 /* ChessBoard.swift in Sources */,
+				D9A5DAB81D7B77A7007DAF93 /* GameService.swift in Sources */,
 				D978B2C11D7AC56C00EC5301 /* i100UITests.swift in Sources */,
 				D978B2D41D7AC72200EC5301 /* Chessboard+Extension.swift in Sources */,
 			);
