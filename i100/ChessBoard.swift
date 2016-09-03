@@ -16,6 +16,10 @@ enum CellType {
     case Out
 }
 
+enum ChessBoardError: Error {
+    case Out, NotEmpty, Generic
+}
+
 struct ChessBoard {
     let maxCell = 99
     
@@ -34,5 +38,19 @@ struct ChessBoard {
             return .Out
         }
         return matrix[cell]!
+    }
+    
+    mutating func setCell(at index:Int) throws {
+        switch value(at: index) {
+        case .Out:
+            throw ChessBoardError.Out
+        case .Full:
+            throw ChessBoardError.NotEmpty
+        case .Empty:
+            matrix[index] = .Full
+        default:
+            throw ChessBoardError.Generic
+        }
+        
     }
 }

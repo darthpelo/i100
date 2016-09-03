@@ -42,6 +42,22 @@ class chessBoardTests: XCTestCase {
         XCTAssert(chessBoard?.value(at: 0) == .Empty)
     }
     
+    func testSetCell() {
+        let idx = 1
+        do {
+            try chessBoard?.setCell(at: idx)
+        } catch ChessBoardError.Out {
+            XCTFail("Out of the chessboard")
+            
+        } catch ChessBoardError.NotEmpty {
+            XCTFail("Cell not empty")
+        } catch {
+            XCTFail()
+        }
+        
+        XCTAssertEqual(chessBoard?.value(at: idx), .Full)
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
