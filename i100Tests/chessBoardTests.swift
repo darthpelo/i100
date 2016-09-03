@@ -59,7 +59,7 @@ class chessBoardTests: XCTestCase {
         let idx = 1
         do {
             try chessBoard?.setCell(at: idx)
-             let value = try chessBoard?.value(at: idx)
+            let value = try chessBoard?.value(at: idx)
             XCTAssertEqual(value, .Full)
         } catch ChessBoardError.Out {
             XCTFail("Out of the chessboard")
@@ -71,12 +71,58 @@ class chessBoardTests: XCTestCase {
         }
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-            let _ = ChessBoard()
+    func testValidMoves() {
+        var idx = 1
+        
+        do {
+            let list = try chessBoard?.validMoves(at: idx)
+            XCTAssertNotNil(list)
+            XCTAssertEqual(list?.count, 3)
+        } catch {
+            XCTFail()
+        }
+        
+        idx = 0
+        
+        do {
+            let list = try chessBoard?.validMoves(at: idx)
+            XCTAssertNotNil(list)
+            XCTAssertEqual(list?.count, 3)
+        } catch {
+            XCTFail()
+        }
+        
+        idx = 4
+        
+        do {
+            var list = try chessBoard?.validMoves(at: idx)
+            XCTAssertNotNil(list)
+            XCTAssertEqual(list?.count, 5)
+            try chessBoard?.setCell(at: 1)
+            list = try chessBoard?.validMoves(at: idx)
+            XCTAssertNotNil(list)
+            XCTAssertEqual(list?.count, 4)
+        } catch {
+            XCTFail()
+        }
+        
+        idx = 101
+        
+        do {
+            let _ = try chessBoard?.validMoves(at: idx)
+            XCTFail()
+        } catch {
+            XCTAssert(true)
+        }
+        
+        idx = 99
+        
+        do {
+            let list = try chessBoard?.validMoves(at: idx)
+            XCTAssertNotNil(list)
+            XCTAssertEqual(list?.count, 3)
+        } catch {
+            XCTFail()
         }
     }
-    
 }
