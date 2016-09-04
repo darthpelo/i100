@@ -89,4 +89,30 @@ struct ChessBoard {
     func getMatrix() -> ChessBoardType {
         return matrix
     }
+    
+    mutating func user(play cell: Int) -> Bool {
+        do {
+            if let lastCell = lastCell {
+                let play = try validMoves(at: lastCell).filter {$0 == cell}
+                if play.count == 1  { return checkPlay(atCell: cell) }
+                else                { return false }
+            } else {
+                return checkPlay(atCell: cell)
+            }
+        } catch {
+            return false
+        }
+    }
+    
+    //MARK: Private
+    
+    private mutating func checkPlay(atCell: Int) -> Bool {
+        do {
+            try setCell(at: atCell)
+            lastCell = atCell
+            return true
+        } catch {
+            return false
+        }
+    }
 }
