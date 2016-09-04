@@ -30,5 +30,10 @@ class gameServiceTests: XCTestCase {
         let score = 34
         GameService.shared.update(score: score)
         XCTAssertEqual(GameService.shared.userScore(), score)
+        
+        let chessBoard = ChessBoard()
+        let matrix = chessBoard.getMatrix()
+        GameService.shared.update(matrix: matrix)
+        XCTAssertEqual(GameService.shared.userMatrix()!, matrix)
     }
 }

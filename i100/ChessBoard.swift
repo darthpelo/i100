@@ -8,7 +8,9 @@
 
 import Foundation
 
-enum CellType {
+public typealias ChessBoardType = [Int:CellType]
+
+public enum CellType: Int {
     case Empty
     case Full
     case Select
@@ -26,8 +28,8 @@ struct ChessBoard {
     private let rowMove = [0,2,3,2,0,-2,-3,-2]
     private let columnMove = [3,2,0,-2,-3,-2,0,2]
     
-    private var matrix:[Int: CellType] = {
-        var tmp:[Int: CellType] = [:]
+    private var matrix:ChessBoardType = {
+        var tmp:ChessBoardType = [:]
         for i in 0..<100 {
             tmp[i] = .Empty
         }
@@ -82,5 +84,9 @@ struct ChessBoard {
         }
         
         return list
+    }
+    
+    func getMatrix() -> ChessBoardType {
+        return matrix
     }
 }
