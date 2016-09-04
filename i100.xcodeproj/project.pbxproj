@@ -26,6 +26,12 @@
 		D9A5DAB71D7B77A7007DAF93 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5DAB51D7B77A7007DAF93 /* GameService.swift */; };
 		D9A5DAB81D7B77A7007DAF93 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5DAB51D7B77A7007DAF93 /* GameService.swift */; };
 		D9A5DABA1D7B77C6007DAF93 /* gameServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5DAB91D7B77C6007DAF93 /* gameServiceTests.swift */; };
+		D9E7208A1D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E720891D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift */; };
+		D9E7208B1D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E720891D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift */; };
+		D9E7208C1D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E720891D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift */; };
+		D9E7208E1D7CBDEC0058EEF1 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7208D1D7CBDEC0058EEF1 /* BottomView.swift */; };
+		D9E7208F1D7CBDEC0058EEF1 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7208D1D7CBDEC0058EEF1 /* BottomView.swift */; };
+		D9E720901D7CBDEC0058EEF1 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7208D1D7CBDEC0058EEF1 /* BottomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +69,8 @@
 		D978B2D11D7AC72200EC5301 /* Chessboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Chessboard+Extension.swift"; sourceTree = "<group>"; };
 		D9A5DAB51D7B77A7007DAF93 /* GameService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
 		D9A5DAB91D7B77C6007DAF93 /* gameServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameServiceTests.swift; sourceTree = "<group>"; };
+		D9E720891D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessBoardCollectionViewCell.swift; sourceTree = "<group>"; };
+		D9E7208D1D7CBDEC0058EEF1 /* BottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +181,8 @@
 		D978B2D01D7AC70400EC5301 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D9E720891D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift */,
+				D9E7208D1D7CBDEC0058EEF1 /* BottomView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -318,6 +328,8 @@
 				D96CB7F11D7B10E4008109E4 /* ChessBoard.swift in Sources */,
 				D9A5DAB61D7B77A7007DAF93 /* GameService.swift in Sources */,
 				D978B2A11D7AC56C00EC5301 /* AppDelegate.swift in Sources */,
+				D9E7208E1D7CBDEC0058EEF1 /* BottomView.swift in Sources */,
+				D9E7208A1D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift in Sources */,
 				D978B2D21D7AC72200EC5301 /* Chessboard+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,8 +338,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9E7208B1D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift in Sources */,
 				D978B2D51D7AC7FC00EC5301 /* ViewController.swift in Sources */,
 				D96CB7F21D7B1103008109E4 /* ChessBoard.swift in Sources */,
+				D9E7208F1D7CBDEC0058EEF1 /* BottomView.swift in Sources */,
 				D9A5DAB71D7B77A7007DAF93 /* GameService.swift in Sources */,
 				D9A5DABA1D7B77C6007DAF93 /* gameServiceTests.swift in Sources */,
 				D978B2B61D7AC56C00EC5301 /* chessBoardTests.swift in Sources */,
@@ -343,6 +357,8 @@
 				D96CB7F31D7B1104008109E4 /* ChessBoard.swift in Sources */,
 				D9A5DAB81D7B77A7007DAF93 /* GameService.swift in Sources */,
 				D978B2C11D7AC56C00EC5301 /* i100UITests.swift in Sources */,
+				D9E720901D7CBDEC0058EEF1 /* BottomView.swift in Sources */,
+				D9E7208C1D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift in Sources */,
 				D978B2D41D7AC72200EC5301 /* Chessboard+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
