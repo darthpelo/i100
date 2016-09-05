@@ -36,8 +36,17 @@ struct ChessBoard {
         return tmp
     }()
     
+    
     var lastCell:Int?
     
+    
+    /// Returns the CellType of a cell
+    ///
+    /// - parameter cell: The Int that rapresent the index of a cell in the matrix.
+    ///
+    /// - throws: Throws ChessBoardError.Out if the index is out of border.
+    ///
+    /// - returns: The CellType
     func value(at cell: Int) throws -> CellType {
         if cell < 0 || cell > maxCell {
             throw ChessBoardError.Out
@@ -45,6 +54,12 @@ struct ChessBoard {
         return matrix[cell]!
     }
     
+    
+    /// Sets as .Full the cell at index if the cell is not .Empty or index out of the borders
+    ///
+    /// - parameter index: The index of the cell to set .Full
+    ///
+    /// - throws: The error in cases the index is not correct
     mutating func setCell(at index:Int) throws {
         let value = try self.value(at: index)
         switch value {
@@ -90,6 +105,11 @@ struct ChessBoard {
         return matrix
     }
     
+    /// Checks if the user play is valid.
+    ///
+    /// - parameter cell: The Int that rapresent the index of a cell in the matrix.
+    ///
+    /// - returns: Return true if the play is valid, false otherwise.
     mutating func user(play cell: Int) -> Bool {
         do {
             if let lastCell = lastCell {

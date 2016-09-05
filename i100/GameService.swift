@@ -9,13 +9,22 @@
 import Foundation
 
 public final class GameService {
-    public static var shared: GameService!
+    var chessboard: ChessBoard
+    
+    init(chessboard: ChessBoard) {
+        self.chessboard = chessboard
+    }
     
     private let userScoreKey = "com.alessioroberto.i100.userScore"
     private let userMatrixKey = "com.alessioroberto.i100.userMatrix"
+    
+    private var gameScore = 0
+    
+    public static var shared: GameService!
 }
 
 extension GameService {
+    //MARK: Storage
     public func userScore() -> Int {
         return UserDefaults.standard.integer(forKey: userScoreKey)
     }
@@ -47,5 +56,19 @@ extension GameService {
     public func resetData() {
         UserDefaults.standard.set(0, forKey: userScoreKey)
         UserDefaults.standard.set(nil, forKey: userMatrixKey)
+    }
+    
+    //MARK: game play
+    public func evaluete(move cell: Int) -> Int {
+        if (self.chessboard.user(play: cell)) {
+            gameScore += 1
+            return gameScore
+        } else {
+            return -1
+        }
+    }
+    
+    public func getGameScore() -> Int {
+        return gameScore
     }
 }
