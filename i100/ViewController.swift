@@ -11,14 +11,23 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet private weak var chessboardCollectionView: UICollectionView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var buttonView: BottomView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setUp()
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+extension ViewController: SetUp {
+    func setUp() {
+        self.setupTitle(text: NSLocalizedString("i100", comment: ""))
+        self.buttonView.setUp()
+    }
+    
+    private func setupTitle(text: String) {
+        self.titleLabel.text = text
     }
 }

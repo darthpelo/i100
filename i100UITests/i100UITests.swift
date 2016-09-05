@@ -31,6 +31,14 @@ class i100UITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+        
+        XCTAssert(app.buttons["info"].exists)
+
+        XCTAssert(app.buttons["reset"].exists)
+        
+        XCTAssert(app.staticTexts["score"].exists)
     }
     
 }
