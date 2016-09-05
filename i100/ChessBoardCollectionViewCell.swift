@@ -11,7 +11,12 @@ import UIKit
 class ChessBoardCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var label: UILabel!
     
-    func setLabel(text: Int) {
-        label.text = "\(text+1)"
+    func setLabel(value: Int) {
+        switch value {
+        case -1:
+            label.text = ""
+        default:
+            label.text = "\(value)"
+        }
     }
 }

@@ -14,7 +14,7 @@ class gameServiceTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        GameService.shared = GameService()
+        GameService.shared = GameService(chessboard: ChessBoard())
         GameService.shared.resetData()
     }
     
@@ -35,5 +35,16 @@ class gameServiceTests: XCTestCase {
         let matrix = chessBoard.getMatrix()
         GameService.shared.update(matrix: matrix)
         XCTAssertEqual(GameService.shared.userMatrix()!, matrix)
+    }
+    
+    func testGamePlay() {
+        let play1 = 1
+        let play2 = 4
+        
+        XCTAssertEqual(GameService.shared.evaluete(move: play1), 1)
+        XCTAssertEqual(GameService.shared.evaluete(move: play1), -1)
+        XCTAssertEqual(GameService.shared.evaluete(move: play2), 2)
+        
+        XCTAssertEqual(GameService.shared.getGameScore(), 2)
     }
 }

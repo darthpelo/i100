@@ -16,7 +16,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Square", for: indexPath) as! ChessBoardCollectionViewCell
-        cell.setLabel(text: indexPath.row)
+        cell.setLabel(value: -1)
         return cell
     }
     
@@ -26,6 +26,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
+        let cell = collectionView.cellForItem(at: indexPath) as! ChessBoardCollectionViewCell
+        cell.setLabel(value: GameService.shared.evaluete(move: indexPath.row))
     }
 }
