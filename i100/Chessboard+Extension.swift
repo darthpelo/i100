@@ -28,5 +28,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! ChessBoardCollectionViewCell
         cell.setLabel(value: GameService.shared.evaluete(move: indexPath.row))
+        scoreLabel(with: String(GameService.shared.getGameScore()))
+    }
+}
+
+extension ViewController {
+    func scoreLabel(with text: String) {
+        buttonView.scoreLabel(text:text)
     }
 }

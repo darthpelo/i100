@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet private weak var chessboardCollectionView: UICollectionView!
     @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var buttonView: BottomView!
+    @IBOutlet weak var buttonView: BottomView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

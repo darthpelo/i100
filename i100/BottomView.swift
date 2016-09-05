@@ -30,5 +30,9 @@ class BottomView: UIView, SetUp {
         self.scoreLabel.accessibilityLabel = NSLocalizedString("access.score", comment: "")
         self.scoreLabel.accessibilityIdentifier = "score"
     }
+    
+    func scoreLabel(text: String) {
+        scoreLabel.text = text
+    }
 }
 
