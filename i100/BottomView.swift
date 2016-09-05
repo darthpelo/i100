@@ -19,10 +19,16 @@ class BottomView: UIView, SetUp {
     
     func setUp() {
         self.resetButton.setTitle(NSLocalizedString("Reset", comment: ""), for: .normal)
+        self.resetButton.accessibilityLabel = NSLocalizedString("access.resetbutton", comment: "")
+        self.resetButton.accessibilityIdentifier = "reset"
+        
         self.infoButton.setTitle(NSLocalizedString("Info", comment: ""), for: .normal)
-        self.infoButton.accessibilityLabel = "Info Button"
+        self.infoButton.accessibilityLabel = NSLocalizedString("access.infobutton", comment: "")
         self.infoButton.accessibilityIdentifier = "info"
+        
         self.scoreLabel.text = "0"
+        self.scoreLabel.accessibilityLabel = NSLocalizedString("access.score", comment: "")
+        self.scoreLabel.accessibilityIdentifier = "score"
     }
 }
 

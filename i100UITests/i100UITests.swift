@@ -33,13 +33,12 @@ class i100UITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
         let app = XCUIApplication()
-        app.staticTexts["i100"].tap()
         
-        app.buttons["info"].tap()
+        XCTAssert(app.buttons["info"].exists)
 
-        app.buttons["reset"].tap()
+        XCTAssert(app.buttons["reset"].exists)
         
-        
+        XCTAssert(app.staticTexts["score"].exists)
     }
     
 }

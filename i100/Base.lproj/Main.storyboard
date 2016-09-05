@@ -88,7 +88,6 @@
                                                         <state key="normal" title="Button"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="683-av-n2M">
-                                                        <accessibility key="accessibilityConfiguration" identifier="reset" label="Reset button"/>
                                                         <state key="normal" title="Button"/>
                                                     </button>
                                                 </subviews>
