@@ -16,7 +16,11 @@ class ViewController: UIViewController {
             titleLabel.text =  NSLocalizedString("i100", comment: "")
         }
     }
-    @IBOutlet weak var buttonView: BottomView!
+    @IBOutlet weak var buttonView: BottomView! {
+        didSet {
+            buttonView.delegate = self
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

@@ -37,3 +37,9 @@ extension ViewController {
         buttonView.scoreLabel(text:text)
     }
 }
+
+extension ViewController: BottomViewDelegate {
+    func requestReset() {
+        GameService.shared.resetData()
+    }
+}

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol BottomViewDelegate: class {
+    func requestReset()
+}
+
 class BottomView: UIView {
     @IBOutlet private weak var scoreLabel: UILabel! {
         didSet {
@@ -18,21 +22,30 @@ class BottomView: UIView {
     }
     @IBOutlet private weak var resetButton: UIButton! {
         didSet {
-            self.resetButton.setTitle(NSLocalizedString("Reset", comment: ""), for: .normal)
-            self.resetButton.accessibilityLabel = NSLocalizedString("access.resetbutton", comment: "")
-            self.resetButton.accessibilityIdentifier = "reset"
+            resetButton.setTitle(NSLocalizedString("Reset", comment: ""), for: .normal)
+            resetButton.accessibilityLabel = NSLocalizedString("access.resetbutton", comment: "")
+            resetButton.accessibilityIdentifier = "reset"
+            resetButton.addTarget(self, action: #selector(getter: resetButton), for: .touchUpInside)
         }
     }
     @IBOutlet private weak var infoButton: UIButton! {
         didSet {
-            self.infoButton.setTitle(NSLocalizedString("Info", comment: ""), for: .normal)
-            self.infoButton.accessibilityLabel = NSLocalizedString("access.infobutton", comment: "")
-            self.infoButton.accessibilityIdentifier = "info"
+            infoButton.setTitle(NSLocalizedString("Info", comment: ""), for: .normal)
+            infoButton.accessibilityLabel = NSLocalizedString("access.infobutton", comment: "")
+            infoButton.accessibilityIdentifier = "info"
         }
     }
     
+    weak var delegate:BottomViewDelegate?
+    
+    //MARK: Public
     func scoreLabel(text: String) {
         scoreLabel.text = text
+    }
+    
+    //MARK: Delegate
+    func resetTapped() {
+        delegate?.requestReset()
     }
 }
 
