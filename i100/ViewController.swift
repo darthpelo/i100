@@ -11,23 +11,14 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet private weak var chessboardCollectionView: UICollectionView!
-    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.text =  NSLocalizedString("i100", comment: "")
+        }
+    }
     @IBOutlet weak var buttonView: BottomView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setUp()
-    }
-}
-
-
-extension ViewController: SetUp {
-    func setUp() {
-        self.setupTitle(text: NSLocalizedString("i100", comment: ""))
-        self.buttonView.setUp()
-    }
-    
-    private func setupTitle(text: String) {
-        self.titleLabel.text = text
     }
 }

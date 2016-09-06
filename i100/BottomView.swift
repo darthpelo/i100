@@ -8,27 +8,27 @@
 
 import UIKit
 
-public protocol SetUp {
-    func setUp()
-}
-
-class BottomView: UIView, SetUp {
-    @IBOutlet private weak var scoreLabel: UILabel!
-    @IBOutlet private weak var resetButton: UIButton!
-    @IBOutlet private weak var infoButton: UIButton!
-    
-    func setUp() {
-        self.resetButton.setTitle(NSLocalizedString("Reset", comment: ""), for: .normal)
-        self.resetButton.accessibilityLabel = NSLocalizedString("access.resetbutton", comment: "")
-        self.resetButton.accessibilityIdentifier = "reset"
-        
-        self.infoButton.setTitle(NSLocalizedString("Info", comment: ""), for: .normal)
-        self.infoButton.accessibilityLabel = NSLocalizedString("access.infobutton", comment: "")
-        self.infoButton.accessibilityIdentifier = "info"
-        
-        self.scoreLabel.text = "0"
-        self.scoreLabel.accessibilityLabel = NSLocalizedString("access.score", comment: "")
-        self.scoreLabel.accessibilityIdentifier = "score"
+class BottomView: UIView {
+    @IBOutlet private weak var scoreLabel: UILabel! {
+        didSet {
+            scoreLabel.text = "0"
+            scoreLabel.accessibilityLabel = NSLocalizedString("access.score", comment: "")
+            scoreLabel.accessibilityIdentifier = "score"
+        }
+    }
+    @IBOutlet private weak var resetButton: UIButton! {
+        didSet {
+            self.resetButton.setTitle(NSLocalizedString("Reset", comment: ""), for: .normal)
+            self.resetButton.accessibilityLabel = NSLocalizedString("access.resetbutton", comment: "")
+            self.resetButton.accessibilityIdentifier = "reset"
+        }
+    }
+    @IBOutlet private weak var infoButton: UIButton! {
+        didSet {
+            self.infoButton.setTitle(NSLocalizedString("Info", comment: ""), for: .normal)
+            self.infoButton.accessibilityLabel = NSLocalizedString("access.infobutton", comment: "")
+            self.infoButton.accessibilityIdentifier = "info"
+        }
     }
     
     func scoreLabel(text: String) {
