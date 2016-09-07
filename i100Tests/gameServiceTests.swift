@@ -47,4 +47,17 @@ class gameServiceTests: XCTestCase {
         
         XCTAssertEqual(GameService.shared.getGameScore(), 2)
     }
+    
+    func testResetGame() {
+        let play1 = 1
+        let play2 = 4
+        
+        XCTAssertEqual(GameService.shared.evaluete(move: play1), 1)
+        XCTAssertEqual(GameService.shared.evaluete(move: play2), 2)
+        
+        GameService.shared.resetData()
+        
+        XCTAssertEqual(GameService.shared.evaluete(move: play1), 1)
+        XCTAssertEqual(GameService.shared.evaluete(move: play2), 2)
+    }
 }

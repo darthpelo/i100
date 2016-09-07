@@ -16,13 +16,20 @@ class ViewController: UIViewController {
             titleLabel.text =  NSLocalizedString("i100", comment: "")
         }
     }
-    @IBOutlet weak var buttonView: BottomView! {
-        didSet {
-            buttonView.delegate = self
-        }
-    }
+    @IBOutlet weak var buttonView: BottomView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        buttonView.delegate = self
+        buttonView.setupView()
+    }
+}
+
+extension ViewController: BottomViewDelegate {
+    func requestReset() {
+        GameService.shared.resetData()
+        chessboardCollectionView.reloadData()
+        buttonView.scoreLabel(text: "0")
     }
 }

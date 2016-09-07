@@ -38,8 +38,3 @@ extension ViewController {
     }
 }
 
-extension ViewController: BottomViewDelegate {
-    func requestReset() {
-        GameService.shared.resetData()
-    }
-}

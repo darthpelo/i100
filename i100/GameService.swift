@@ -56,6 +56,8 @@ extension GameService {
     public func resetData() {
         UserDefaults.standard.set(0, forKey: userScoreKey)
         UserDefaults.standard.set(nil, forKey: userMatrixKey)
+        chessboard.resetMatrix()
+        gameScore = 0
     }
     
     //MARK: game play

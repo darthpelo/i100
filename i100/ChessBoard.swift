@@ -8,14 +8,18 @@
 
 import Foundation
 
+/// The rappresentation of the Chessboard
 public typealias ChessBoardType = [Int:CellType]
 
+/// The cell types
+///
+/// - Empty:   An empty cell
+/// - Full:    A selected cell
+/// - Suggest: A suggested cell for the next play
 public enum CellType: Int {
     case Empty
     case Full
-    case Select
     case Suggest
-    case Out
 }
 
 enum ChessBoardError: Error {
@@ -36,7 +40,7 @@ struct ChessBoard {
         return tmp
     }()
     
-    
+    /// Last valid cell selected by the player
     var lastCell:Int?
     
     
@@ -63,8 +67,6 @@ struct ChessBoard {
     mutating func setCell(at index:Int) throws {
         let value = try self.value(at: index)
         switch value {
-        case .Out:
-            throw ChessBoardError.Out
         case .Full:
             throw ChessBoardError.NotEmpty
         case .Empty:
@@ -74,6 +76,14 @@ struct ChessBoard {
         }
     }
     
+    
+    /// Returns all the valide moves from a cell.
+    ///
+    /// - parameter index: The index of the cell.
+    ///
+    /// - throws: An error if the index is out of the matrix
+    ///
+    /// - returns: An array of Int with the indexes of all valide moves
     func validMoves(at index: Int) throws -> [Int] {
         if index < 0 || index > maxCell {
             throw ChessBoardError.Out
@@ -101,8 +111,18 @@ struct ChessBoard {
         return list
     }
     
+    
+    /// Return the actual istance of the chessboard
+    ///
+    /// - returns: The cheesboard
     func getMatrix() -> ChessBoardType {
         return matrix
+    }
+    
+    mutating func resetMatrix() {
+        for i in 0..<100 {
+            matrix[i] = .Empty
+        }
     }
     
     /// Checks if the user play is valid.
