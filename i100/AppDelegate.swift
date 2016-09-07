@@ -13,12 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
+    public func applicationDidFinishLaunching(_ application: UIApplication) {
         GameService.shared = GameService(chessboard: ChessBoard())
-        
-        return true
     }
 }
 

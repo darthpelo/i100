@@ -15,10 +15,10 @@ public final class GameService {
         self.chessboard = chessboard
     }
     
-    private let userScoreKey = "com.alessioroberto.i100.userScore"
-    private let userMatrixKey = "com.alessioroberto.i100.userMatrix"
+    let userScoreKey = "com.alessioroberto.i100.userScore"
+    let userMatrixKey = "com.alessioroberto.i100.userMatrix"
     
-    private var gameScore = 0
+    var gameScore = 0
     
     public static var shared: GameService!
 }
