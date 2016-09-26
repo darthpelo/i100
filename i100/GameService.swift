@@ -20,6 +20,7 @@ public final class GameService {
     
     fileprivate let userScoreKey = "com.alessioroberto.i100.userScore"
     fileprivate let userMatrixKey = "com.alessioroberto.i100.userMatrix"
+    fileprivate let userMaxScoreKey = "com.alessioroberto.i100.userMaxScore"
     
     fileprivate var gameScore = 0
     
@@ -91,6 +92,10 @@ extension GameService {
     public func evaluete(move cell: Int) -> Int {
         if (self.chessboard.user(play: cell)) {
             gameScore += 1
+            // Compare with the MaxUserScore
+            if gameScore > UserDefaults.standard.integer(forKey: userMaxScoreKey) {
+                UserDefaults.standard.set(gameScore, forKey: userMaxScoreKey)
+            }
             return gameScore
         } else {
             return -1
@@ -100,8 +105,8 @@ extension GameService {
     
     /// Returns the actual core of the user
     ///
-    /// - returns: The score of the user
+    /// - returns: The max score of the user
     public func getGameScore() -> Int {
-        return gameScore
+        return UserDefaults.standard.integer(forKey: userMaxScoreKey)
     }
 }

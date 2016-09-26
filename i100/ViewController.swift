@@ -30,6 +30,5 @@ extension ViewController: BottomViewDelegate {
     func requestReset() {
         GameService.shared.resetData()
         chessboardCollectionView.reloadData()
-//        buttonView.scoreLabel(text: "0")
     }
 }
