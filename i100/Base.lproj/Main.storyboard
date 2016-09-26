@@ -168,11 +168,66 @@
                         <outlet property="buttonView" destination="XEb-nz-HFt" id="pxC-gC-3y6"/>
                         <outlet property="chessboardCollectionView" destination="0QZ-K5-pFm" id="bcv-We-32K"/>
                         <outlet property="titleLabel" destination="yg2-Ke-OcG" id="WWq-Dd-n9I"/>
+                        <segue destination="Ji4-7f-wQe" kind="presentation" identifier="InfoVC" id="XS7-ct-0sP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="116" y="122.78860569715144"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="5q4-Bz-ZsJ">
+            <objects>
+                <viewController id="Ji4-7f-wQe" customClass="InfoViewController" customModule="i100" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vS7-vH-VQ5"/>
+                        <viewControllerLayoutGuide type="bottom" id="94B-vU-xBz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1JE-c5-6uC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCo-fg-a4r">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvf-Ep-kMc">
+                                        <accessibility key="accessibilityConfiguration" label="i100"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="TFz-Lw-7fZ"/>
+                                    <constraint firstItem="cvf-Ep-kMc" firstAttribute="centerY" secondItem="KCo-fg-a4r" secondAttribute="centerY" id="dqh-Ed-rbx"/>
+                                    <constraint firstItem="cvf-Ep-kMc" firstAttribute="centerX" secondItem="KCo-fg-a4r" secondAttribute="centerX" id="pdf-Vv-pvP"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B8a-Rz-26O">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="94B-vU-xBz" firstAttribute="top" secondItem="B8a-Rz-26O" secondAttribute="bottom" constant="20" id="4gl-Je-bXY"/>
+                            <constraint firstItem="KCo-fg-a4r" firstAttribute="leading" secondItem="1JE-c5-6uC" secondAttribute="leadingMargin" id="DW8-mh-R7U"/>
+                            <constraint firstItem="B8a-Rz-26O" firstAttribute="top" secondItem="KCo-fg-a4r" secondAttribute="bottom" constant="8" id="EuM-oi-loI"/>
+                            <constraint firstItem="B8a-Rz-26O" firstAttribute="leading" secondItem="1JE-c5-6uC" secondAttribute="leadingMargin" id="PNT-F2-Me9"/>
+                            <constraint firstItem="KCo-fg-a4r" firstAttribute="trailing" secondItem="1JE-c5-6uC" secondAttribute="trailingMargin" id="b2M-ck-BFm"/>
+                            <constraint firstItem="KCo-fg-a4r" firstAttribute="top" secondItem="vS7-vH-VQ5" secondAttribute="bottom" constant="8" id="nox-MS-SkY"/>
+                            <constraint firstItem="B8a-Rz-26O" firstAttribute="trailing" secondItem="1JE-c5-6uC" secondAttribute="trailingMargin" id="qLH-GS-deh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="cvf-Ep-kMc" id="UQC-XZ-XqF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVh-P1-Zfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888.79999999999995" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
