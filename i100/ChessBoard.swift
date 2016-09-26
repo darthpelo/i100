@@ -120,9 +120,9 @@ struct ChessBoard {
     }
     
     mutating func resetMatrix() {
-        for i in 0..<100 {
-            matrix[i] = .Empty
-        }
+        lastCell = nil
+        
+        let _ = (0..<100).map { matrix[$0] = .Empty }
     }
     
     /// Checks if the user play is valid.

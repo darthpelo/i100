@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet private weak var chessboardCollectionView: UICollectionView!
-    @IBOutlet private weak var titleLabel: UILabel! {
+    @IBOutlet fileprivate weak var chessboardCollectionView: UICollectionView!
+    @IBOutlet fileprivate weak var titleLabel: UILabel! {
         didSet {
             titleLabel.text =  NSLocalizedString("i100", comment: "")
         }
@@ -30,6 +30,6 @@ extension ViewController: BottomViewDelegate {
     func requestReset() {
         GameService.shared.resetData()
         chessboardCollectionView.reloadData()
-        buttonView.scoreLabel(text: "0")
+//        buttonView.scoreLabel(text: "0")
     }
 }
