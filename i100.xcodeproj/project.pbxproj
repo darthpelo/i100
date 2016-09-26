@@ -132,13 +132,13 @@
 		D978B29F1D7AC56C00EC5301 /* i100 */ = {
 			isa = PBXGroup;
 			children = (
-				D9B66CA71D7DB9C80023A855 /* UIViewExtensions.swift */,
 				D96CB7EF1D7B10C0008109E4 /* Model Layer */,
 				D978B2CE1D7AC6F100EC5301 /* Chessboard */,
 				D978B2A01D7AC56C00EC5301 /* AppDelegate.swift */,
+				D9B66CA71D7DB9C80023A855 /* UIViewExtensions.swift */,
 				D978B2A41D7AC56C00EC5301 /* Main.storyboard */,
-				D978B2A71D7AC56C00EC5301 /* Assets.xcassets */,
 				D978B2A91D7AC56C00EC5301 /* LaunchScreen.storyboard */,
+				D978B2A71D7AC56C00EC5301 /* Assets.xcassets */,
 				D978B2AC1D7AC56C00EC5301 /* Info.plist */,
 			);
 			path = i100;

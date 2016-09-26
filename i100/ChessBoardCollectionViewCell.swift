@@ -17,5 +17,6 @@ class ChessBoardCollectionViewCell: UICollectionViewCell {
     
     func setLabel(value: Int) {
         if value > 0 { label.text = "\(value)" }
+        else {label.text = "" }
     }
 }

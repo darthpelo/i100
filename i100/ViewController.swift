@@ -10,19 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet private weak var chessboardCollectionView: UICollectionView!
-    @IBOutlet private weak var titleLabel: UILabel! {
+    @IBOutlet fileprivate weak var chessboardCollectionView: UICollectionView!
+    @IBOutlet fileprivate weak var titleLabel: UILabel! {
         didSet {
             titleLabel.text =  NSLocalizedString("i100", comment: "")
         }
     }
-    @IBOutlet weak var buttonView: BottomView! {
-        didSet {
-            buttonView.delegate = self
-        }
-    }
+    @IBOutlet weak var buttonView: BottomView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        buttonView.delegate = self
+        buttonView.setupView()
+    }
+}
+
+extension ViewController: BottomViewDelegate {
+    func requestReset() {
+        GameService.shared.resetData()
+        chessboardCollectionView.reloadData()
     }
 }

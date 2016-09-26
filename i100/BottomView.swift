@@ -25,7 +25,6 @@ class BottomView: UIView {
             resetButton.setTitle(NSLocalizedString("Reset", comment: ""), for: .normal)
             resetButton.accessibilityLabel = NSLocalizedString("access.resetbutton", comment: "")
             resetButton.accessibilityIdentifier = "reset"
-            resetButton.addTarget(self, action: #selector(getter: resetButton), for: .touchUpInside)
         }
     }
     @IBOutlet private weak var infoButton: UIButton! {
@@ -37,6 +36,10 @@ class BottomView: UIView {
     }
     
     weak var delegate:BottomViewDelegate?
+    
+    func setupView() {
+        resetButton.addTarget(self, action: #selector(resetTapped), for: .touchUpInside)
+    }
     
     //MARK: Public
     func scoreLabel(text: String) {
