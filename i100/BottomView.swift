@@ -39,6 +39,7 @@ class BottomView: UIView {
     
     func setupView() {
         resetButton.addTarget(self, action: #selector(resetTapped), for: .touchUpInside)
+        self.scoreLabel(text: String(GameService.shared.getGameScore()))
     }
     
     //MARK: Public
