@@ -154,7 +154,7 @@ struct ChessBoard {
             let nextMoves = try validMoves(at: atCell)
             if nextMoves.count == 0 {
                 let nc = NotificationCenter.default
-                nc.post(name: NSNotification.Name(rawValue: "GameOver"), object: nil)
+                nc.post(name: NSNotification.Name(rawValue: NotificationName.GameOver.rawValue), object: nil)
             }
             return true
         } catch {

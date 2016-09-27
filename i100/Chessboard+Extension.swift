@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+enum NotificationName: String {
+    case GameOver
+}
+
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 100

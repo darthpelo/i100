@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         let nc = NotificationCenter.default
         nc.addObserver(self,
                        selector: #selector(ViewController.catchNotification),
-                       name: NSNotification.Name(rawValue: "GameOver"),
+                       name: NSNotification.Name(rawValue: NotificationName.GameOver.rawValue),
                        object: nil)
     }
     
