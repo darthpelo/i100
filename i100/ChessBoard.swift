@@ -150,6 +150,12 @@ struct ChessBoard {
         do {
             try setCell(at: atCell)
             lastCell = atCell
+            // Check Game Over
+            let nextMoves = try validMoves(at: atCell)
+            if nextMoves.count == 0 {
+                let nc = NotificationCenter.default
+                nc.post(name: NSNotification.Name(rawValue: "GameOver"), object: nil)
+            }
             return true
         } catch {
             return false

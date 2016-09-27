@@ -103,10 +103,18 @@ extension GameService {
     }
     
     
-    /// Returns the actual core of the user
+    /// Returns the max score of the user
     ///
     /// - returns: The max score of the user
-    public func getGameScore() -> Int {
+    public func getMaxGameScore() -> Int {
         return UserDefaults.standard.integer(forKey: userMaxScoreKey)
+    }
+    
+    
+    /// Returns the actual game score of the user
+    ///
+    /// - returns: The score of the user
+    public func getGameScore() -> Int {
+        return gameScore
     }
 }

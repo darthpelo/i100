@@ -23,6 +23,16 @@ class ViewController: UIViewController {
         
         buttonView.delegate = self
         buttonView.setupView()
+
+        let nc = NotificationCenter.default
+        nc.addObserver(self,
+                       selector: #selector(ViewController.catchNotification),
+                       name: NSNotification.Name(rawValue: "GameOver"),
+                       object: nil)
+    }
+    
+    func catchNotification(notification:NSNotification) {
+        titleLabel.text = NSLocalizedString("Game Over", comment: "")
     }
 }
 
@@ -30,5 +40,6 @@ extension ViewController: BottomViewDelegate {
     func requestReset() {
         GameService.shared.resetData()
         chessboardCollectionView.reloadData()
+        titleLabel.text =  NSLocalizedString("i100", comment: "")
     }
 }

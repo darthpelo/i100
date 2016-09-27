@@ -32,7 +32,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         
         if newValue > 0 {
             cell.setLabel(value: newValue)
-            scoreLabel(with: String(GameService.shared.getGameScore()))
+            scoreLabel(with: String(GameService.shared.getMaxGameScore()))
         }
     }
 }
