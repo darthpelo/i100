@@ -10,5 +10,5 @@ import Foundation
 
 struct InfoViewModel {
     let titleLabel = NSLocalizedString("i100", comment: "")
-    
+//    let textView = NSLocalizedString("game.description", comment: "")
 }

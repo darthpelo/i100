@@ -15,9 +15,23 @@ class InfoViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet fileprivate weak var descriptionTextView: UITextView!
+    
+    @IBOutlet fileprivate weak var closeButton: UIButton! {
+        didSet {
+            closeButton.setTitle(NSLocalizedString("X", comment: ""), for: .normal)
+            closeButton.accessibilityLabel = NSLocalizedString("access.closebutton", comment: "")
+            closeButton.accessibilityIdentifier = "close"
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside) 
+    }
+    
+    func closeButtonTapped() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
