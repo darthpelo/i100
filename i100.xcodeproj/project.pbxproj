@@ -258,7 +258,7 @@
 				TargetAttributes = {
 					D978B29C1D7AC56C00EC5301 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = GK5S624D99;
+						DevelopmentTeam = SFWNSYN8YK;
 						ProvisioningStyle = Manual;
 					};
 					D978B2B01D7AC56C00EC5301 = {
