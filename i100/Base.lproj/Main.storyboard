@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYw-Yj-0Ob">
@@ -147,8 +147,8 @@
                                     <constraint firstItem="0QZ-K5-pFm" firstAttribute="leading" secondItem="lnV-qX-tk7" secondAttribute="leading" id="ARA-j2-chV"/>
                                     <constraint firstAttribute="bottom" secondItem="XEb-nz-HFt" secondAttribute="bottom" id="Bmq-Rw-dfn"/>
                                     <constraint firstAttribute="trailing" secondItem="0QZ-K5-pFm" secondAttribute="trailing" id="Fe9-aS-Dr1"/>
-                                    <constraint firstItem="0QZ-K5-pFm" firstAttribute="top" secondItem="lnV-qX-tk7" secondAttribute="top" constant="32" id="MAU-g8-SPG"/>
                                     <constraint firstItem="XEb-nz-HFt" firstAttribute="leading" secondItem="lnV-qX-tk7" secondAttribute="leading" id="crP-RT-P6l"/>
+                                    <constraint firstItem="XEb-nz-HFt" firstAttribute="top" secondItem="0QZ-K5-pFm" secondAttribute="bottom" constant="16" id="hf5-O9-XKt"/>
                                     <constraint firstAttribute="trailing" secondItem="XEb-nz-HFt" secondAttribute="trailing" id="ysH-iZ-ujd"/>
                                 </constraints>
                             </view>
@@ -158,7 +158,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="lnV-qX-tk7" secondAttribute="trailing" id="2RC-Kf-RcW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vYw-Yj-0Ob" secondAttribute="trailing" id="Jq1-0M-4ck"/>
                             <constraint firstItem="vYw-Yj-0Ob" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="M4a-SM-Jkm"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lnV-qX-tk7" secondAttribute="bottom" constant="32" id="NzV-Br-exB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lnV-qX-tk7" secondAttribute="bottom" id="NzV-Br-exB"/>
                             <constraint firstItem="lnV-qX-tk7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fwk-AM-Ogj"/>
                             <constraint firstItem="lnV-qX-tk7" firstAttribute="top" secondItem="vYw-Yj-0Ob" secondAttribute="bottom" id="ipa-85-kqm"/>
                             <constraint firstItem="vYw-Yj-0Ob" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oPO-KX-Scs"/>
@@ -168,11 +168,94 @@
                         <outlet property="buttonView" destination="XEb-nz-HFt" id="pxC-gC-3y6"/>
                         <outlet property="chessboardCollectionView" destination="0QZ-K5-pFm" id="bcv-We-32K"/>
                         <outlet property="titleLabel" destination="yg2-Ke-OcG" id="WWq-Dd-n9I"/>
+                        <segue destination="Ji4-7f-wQe" kind="presentation" identifier="InfoVC" id="XS7-ct-0sP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="116" y="122.78860569715144"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="5q4-Bz-ZsJ">
+            <objects>
+                <viewController id="Ji4-7f-wQe" customClass="InfoViewController" customModule="i100" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vS7-vH-VQ5"/>
+                        <viewControllerLayoutGuide type="bottom" id="94B-vU-xBz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1JE-c5-6uC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCo-fg-a4r">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvf-Ep-kMc">
+                                        <accessibility key="accessibilityConfiguration" label="i100"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSN-dz-XPH">
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.93725490570000003" green="0.34901961679999999" blue="0.1921568662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.93725490570000003" green="0.34901961679999999" blue="0.1921568662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vSN-dz-XPH" secondAttribute="bottom" constant="23" id="82g-qj-NMs"/>
+                                    <constraint firstAttribute="trailing" secondItem="vSN-dz-XPH" secondAttribute="trailing" constant="20" id="GY4-QG-NT8"/>
+                                    <constraint firstAttribute="height" constant="64" id="TFz-Lw-7fZ"/>
+                                    <constraint firstItem="cvf-Ep-kMc" firstAttribute="centerY" secondItem="KCo-fg-a4r" secondAttribute="centerY" id="dqh-Ed-rbx"/>
+                                    <constraint firstItem="cvf-Ep-kMc" firstAttribute="centerX" secondItem="KCo-fg-a4r" secondAttribute="centerX" id="pdf-Vv-pvP"/>
+                                    <constraint firstItem="vSN-dz-XPH" firstAttribute="top" secondItem="KCo-fg-a4r" secondAttribute="top" constant="19" id="q85-qQ-kM3"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B8a-Rz-26O">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text"> Scopo del gioco e' riempire quanto piu' possibile un quadrato con i numeri progressivi, da 1 a 100 se si sceglie il quadrato 10x10, da 1 a 81 se si sceglie il quadrato 9x9 e cosi' via fino al quadrato 5x5.
+   Potete scegliere uno dei 2 metodi per riempire il quadrato: la mossa del gioco del 100, o la mossa del cavallo. Si parte da una casella qualsiasi.
+- Per la mossa del gioco del 100 le 2 regole sono queste:
+1) se ci si muove in orizzontale o verticale, si saltano 2 caselle e si va sulla terza,
+2) se ci si muove in diagonale, si salta 1 casella e si va sulla seconda.
+- Per la mossa del cavallo ci si muove come il cavallo degli scacchi ovvero: ad ogni turno ci si muove di 2 caselle in orizzontale e di 1 in verticale, oppure di 1 in orizzontale e di 2 in verticale.
+   
+Buon divertimento!</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="94B-vU-xBz" firstAttribute="top" secondItem="B8a-Rz-26O" secondAttribute="bottom" constant="20" id="4gl-Je-bXY"/>
+                            <constraint firstItem="KCo-fg-a4r" firstAttribute="leading" secondItem="1JE-c5-6uC" secondAttribute="leadingMargin" id="DW8-mh-R7U"/>
+                            <constraint firstItem="B8a-Rz-26O" firstAttribute="top" secondItem="KCo-fg-a4r" secondAttribute="bottom" constant="8" id="EuM-oi-loI"/>
+                            <constraint firstItem="B8a-Rz-26O" firstAttribute="leading" secondItem="1JE-c5-6uC" secondAttribute="leadingMargin" id="PNT-F2-Me9"/>
+                            <constraint firstItem="KCo-fg-a4r" firstAttribute="trailing" secondItem="1JE-c5-6uC" secondAttribute="trailingMargin" id="b2M-ck-BFm"/>
+                            <constraint firstItem="KCo-fg-a4r" firstAttribute="top" secondItem="vS7-vH-VQ5" secondAttribute="bottom" constant="8" id="nox-MS-SkY"/>
+                            <constraint firstItem="B8a-Rz-26O" firstAttribute="trailing" secondItem="1JE-c5-6uC" secondAttribute="trailingMargin" id="qLH-GS-deh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="vSN-dz-XPH" id="v8b-i3-wGX"/>
+                        <outlet property="descriptionTextView" destination="B8a-Rz-26O" id="6tf-kc-DQl"/>
+                        <outlet property="titleLabel" destination="cvf-Ep-kMc" id="UQC-XZ-XqF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVh-P1-Zfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888.79999999999995" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>

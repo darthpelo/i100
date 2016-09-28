@@ -10,6 +10,7 @@ import UIKit
 
 protocol BottomViewDelegate: class {
     func requestReset()
+    func requestInfo()
 }
 
 class BottomView: UIView {
@@ -39,7 +40,8 @@ class BottomView: UIView {
     
     func setupView() {
         resetButton.addTarget(self, action: #selector(resetTapped), for: .touchUpInside)
-        self.scoreLabel(text: String(GameService.shared.getMaxGameScore()))
+        infoButton.addTarget(self, action: #selector(infoTapped), for: .touchUpInside)
+        self.scoreLabel(text: String(GameService.shared.getGameScore()))
     }
     
     //MARK: Public
@@ -50,6 +52,10 @@ class BottomView: UIView {
     //MARK: Delegate
     func resetTapped() {
         delegate?.requestReset()
+    }
+    
+    func infoTapped() {
+        delegate?.requestInfo()
     }
 }
 

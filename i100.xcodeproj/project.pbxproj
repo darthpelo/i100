@@ -22,6 +22,8 @@
 		D978B2D41D7AC72200EC5301 /* Chessboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978B2D11D7AC72200EC5301 /* Chessboard+Extension.swift */; };
 		D978B2D51D7AC7FC00EC5301 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978B2A21D7AC56C00EC5301 /* ViewController.swift */; };
 		D978B2D61D7AC7FC00EC5301 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978B2A21D7AC56C00EC5301 /* ViewController.swift */; };
+		D97F3BE61D99CD5A00200C56 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F3BE51D99CD5A00200C56 /* InfoViewController.swift */; };
+		D97F3BE81D99CD6F00200C56 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F3BE71D99CD6F00200C56 /* InfoViewModel.swift */; };
 		D9A5DAB61D7B77A7007DAF93 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5DAB51D7B77A7007DAF93 /* GameService.swift */; };
 		D9A5DAB71D7B77A7007DAF93 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5DAB51D7B77A7007DAF93 /* GameService.swift */; };
 		D9A5DAB81D7B77A7007DAF93 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5DAB51D7B77A7007DAF93 /* GameService.swift */; };
@@ -68,6 +70,8 @@
 		D978B2C01D7AC56C00EC5301 /* i100UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i100UITests.swift; sourceTree = "<group>"; };
 		D978B2C21D7AC56C00EC5301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D978B2D11D7AC72200EC5301 /* Chessboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Chessboard+Extension.swift"; sourceTree = "<group>"; };
+		D97F3BE51D99CD5A00200C56 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		D97F3BE71D99CD6F00200C56 /* InfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		D9A5DAB51D7B77A7007DAF93 /* GameService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
 		D9A5DAB91D7B77C6007DAF93 /* gameServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameServiceTests.swift; sourceTree = "<group>"; };
 		D9B66CA71D7DB9C80023A855 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -132,8 +136,9 @@
 		D978B29F1D7AC56C00EC5301 /* i100 */ = {
 			isa = PBXGroup;
 			children = (
-				D96CB7EF1D7B10C0008109E4 /* Model Layer */,
 				D978B2CE1D7AC6F100EC5301 /* Chessboard */,
+				D97F3BE31D99CD3300200C56 /* Info */,
+				D96CB7EF1D7B10C0008109E4 /* Model Layer */,
 				D978B2A01D7AC56C00EC5301 /* AppDelegate.swift */,
 				D9B66CA71D7DB9C80023A855 /* UIViewExtensions.swift */,
 				D978B2A41D7AC56C00EC5301 /* Main.storyboard */,
@@ -188,6 +193,23 @@
 				D9E7208D1D7CBDEC0058EEF1 /* BottomView.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		D97F3BE31D99CD3300200C56 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				D97F3BE41D99CD3F00200C56 /* ViewController */,
+				D97F3BE71D99CD6F00200C56 /* InfoViewModel.swift */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
+		D97F3BE41D99CD3F00200C56 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D97F3BE51D99CD5A00200C56 /* InfoViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,10 +349,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D97F3BE81D99CD6F00200C56 /* InfoViewModel.swift in Sources */,
 				D978B2A31D7AC56C00EC5301 /* ViewController.swift in Sources */,
 				D96CB7F11D7B10E4008109E4 /* ChessBoard.swift in Sources */,
 				D9B66CA81D7DB9C80023A855 /* UIViewExtensions.swift in Sources */,
 				D9A5DAB61D7B77A7007DAF93 /* GameService.swift in Sources */,
+				D97F3BE61D99CD5A00200C56 /* InfoViewController.swift in Sources */,
 				D978B2A11D7AC56C00EC5301 /* AppDelegate.swift in Sources */,
 				D9E7208E1D7CBDEC0058EEF1 /* BottomView.swift in Sources */,
 				D9E7208A1D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift in Sources */,

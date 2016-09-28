@@ -42,4 +42,8 @@ extension ViewController: BottomViewDelegate {
         chessboardCollectionView.reloadData()
         titleLabel.text =  NSLocalizedString("i100", comment: "")
     }
+    
+    func requestInfo() {
+        self.performSegue(withIdentifier: "InfoVC", sender: nil)
+    }
 }
