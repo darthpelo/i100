@@ -31,6 +31,10 @@ class ViewController: UIViewController {
                        object: nil)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     func catchNotification(notification:NSNotification) {
         titleLabel.text = NSLocalizedString("Game Over", comment: "")
     }
