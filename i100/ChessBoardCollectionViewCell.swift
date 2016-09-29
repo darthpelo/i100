@@ -9,14 +9,26 @@
 import UIKit
 
 class ChessBoardCollectionViewCell: UICollectionViewCell {
-    @IBOutlet private weak var label: UILabel! {
+    @IBOutlet fileprivate weak var label: UILabel! {
         didSet {
             label.text = ""
+            label.backgroundColor = UIColor.clear
         }
     }
     
     func setLabel(value: Int) {
-        if value > 0 { label.text = "\(value)" }
-        else {label.text = "" }
+        if value > 0 {
+            label.text = "\(value)"
+        } else {
+            label.text = ""
+            switchBackground(from: UIColor.white, to: UIColor.black)
+        }
+    }
+}
+
+extension ChessBoardCollectionViewCell {
+    public func switchBackground(from color: UIColor, to: UIColor) {
+        self.backgroundColor = to
+        self.label.textColor = color
     }
 }

@@ -21,17 +21,21 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYw-Yj-0Ob">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yg2-Ke-OcG">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yg2-Ke-OcG">
                                         <accessibility key="accessibilityConfiguration" label="i100"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="cVB-7q-5ls"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="55"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="yg2-Ke-OcG" firstAttribute="centerX" secondItem="vYw-Yj-0Ob" secondAttribute="centerX" id="36V-6b-IOa"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="128" id="4Bd-Ot-tQu"/>
                                     <constraint firstItem="yg2-Ke-OcG" firstAttribute="centerY" secondItem="vYw-Yj-0Ob" secondAttribute="centerY" id="clm-Sg-C8g"/>
-                                    <constraint firstAttribute="height" constant="64" id="jDB-XQ-s0T"/>
+                                    <constraint firstAttribute="height" priority="750" constant="128" id="jDB-XQ-s0T"/>
+                                    <constraint firstItem="yg2-Ke-OcG" firstAttribute="centerX" secondItem="vYw-Yj-0Ob" secondAttribute="centerX" id="pfu-Z6-5hQ"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnV-qX-tk7">
@@ -144,6 +148,7 @@
                                     <constraint firstAttribute="trailing" secondItem="0QZ-K5-pFm" secondAttribute="trailing" id="Fe9-aS-Dr1"/>
                                     <constraint firstItem="XEb-nz-HFt" firstAttribute="leading" secondItem="lnV-qX-tk7" secondAttribute="leading" id="crP-RT-P6l"/>
                                     <constraint firstItem="XEb-nz-HFt" firstAttribute="top" secondItem="0QZ-K5-pFm" secondAttribute="bottom" constant="16" id="hf5-O9-XKt"/>
+                                    <constraint firstItem="0QZ-K5-pFm" firstAttribute="top" relation="lessThanOrEqual" secondItem="lnV-qX-tk7" secondAttribute="top" constant="98" id="p3G-NG-GJw"/>
                                     <constraint firstAttribute="trailing" secondItem="XEb-nz-HFt" secondAttribute="trailing" id="ysH-iZ-ujd"/>
                                 </constraints>
                             </view>

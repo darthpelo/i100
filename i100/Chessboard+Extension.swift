@@ -36,6 +36,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         
         if newValue > 0 {
             cell.setLabel(value: newValue)
+            cell.switchBackground(from: UIColor.black, to: UIColor.white)
+            if let previousCell = GameService.shared.chessboard.previousCell {
+                let previous = collectionView.cellForItem(at: IndexPath(row: previousCell, section: 0)) as! ChessBoardCollectionViewCell
+                previous.switchBackground(from: UIColor.white, to: UIColor.black)
+            }
             scoreLabel(with: String(GameService.shared.getMaxGameScore()))
         }
     }

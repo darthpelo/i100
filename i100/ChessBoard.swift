@@ -44,6 +44,10 @@ struct ChessBoard {
     var lastCell:Int?
     
     
+    /// Previous valid cell. Neccesary for undo and UI purpose
+    var previousCell:Int?
+    
+    
     /// Returns the CellType of a cell
     ///
     /// - parameter cell: The Int that rapresent the index of a cell in the matrix.
@@ -121,7 +125,7 @@ struct ChessBoard {
     
     mutating func resetMatrix() {
         lastCell = nil
-        
+        previousCell = nil
         let _ = (0..<100).map { matrix[$0] = .Empty }
     }
     
@@ -149,6 +153,7 @@ struct ChessBoard {
     private mutating func checkPlay(atCell: Int) -> Bool {
         do {
             try setCell(at: atCell)
+            previousCell = lastCell
             lastCell = atCell
             // Check Game Over
             let nextMoves = try validMoves(at: atCell)
