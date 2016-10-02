@@ -1,0 +1,17 @@
+
+A cosa serve una lavagna se non a giocare ad i100?
+
+Digital_Darwinism Group è fiera di presentare il suo primo gioco per iPhone e iPod touch:
+il caro vecchio gioco del cento!
+
+Lo scopo è semplice, riempire tutte le caselle con i numeri da 1 a 100 consecutivamente.
+
+Per posizionare i numeri, che verranno aggiunti semplicemente toccando la csella desiderata, si deono rispettare due semplici regole:
+1) per inserire un numero in orizzontale o in verticale, bisogna lasciare due caselle vuote rispetto alla casella in cui si trova l'ultimo numero;
+2)per inserire un numeri in diagonale si deve lasciare solo una casella vuota.
+
+Il pulsante "Help" ci sarà d'aiuto quando non sapremo quali mosse fare: toccandolo verrano evidenziate le caselle disponibili, sempre che ve ne siano, per continuare il gioco.
+
+Nel caso in cui ci accorgessimo di aver fatto una mossa sbagliata, potremo tornare indietro ( per un massimo di tre mosse) toccando nuovamente la casella in cui abbiamo inserito l'ultimo numero, per passare così al precedente. Questo non sarà possibile quando si arriverà in una posizione in cui non sono più disponibili mosse valide; in questo caso il gioco si concluderà.
+
+Il pulsante di "Reset" servirà per iniziare una nuova partita, cancellando tutti i numeri già posizionati.

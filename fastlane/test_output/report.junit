@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites tests='9' failures='0'>
+  <testsuite name='i100UITests.i100UITests' tests='1' failures='0'>
+    <testcase classname='i100UITests.i100UITests' name='testExample' time='6.198'/>
+  </testsuite>
+  <testsuite name='i100Tests.chessBoardTests' tests='5' failures='0'>
+    <testcase classname='i100Tests.chessBoardTests' name='testchessBoardSetup' time='0.013'/>
+    <testcase classname='i100Tests.chessBoardTests' name='testSelectCell' time='0.000'/>
+    <testcase classname='i100Tests.chessBoardTests' name='testSetCell' time='0.000'/>
+    <testcase classname='i100Tests.chessBoardTests' name='testUserPlay' time='0.003'/>
+    <testcase classname='i100Tests.chessBoardTests' name='testValidMoves' time='0.001'/>
+  </testsuite>
+  <testsuite name='i100Tests.gameServiceTests' tests='3' failures='0'>
+    <testcase classname='i100Tests.gameServiceTests' name='testGamePlay' time='0.005'/>
+    <testcase classname='i100Tests.gameServiceTests' name='testGameService' time='0.007'/>
+    <testcase classname='i100Tests.gameServiceTests' name='testResetGame' time='0.001'/>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,26 @@
+What is a blackboard if not to play with i100? 
+Digital_Darwinism Group is proud to present its first game for iPhone and 
+iPod touch. 
+The aim is to fill all the boxes with numbers from 1 to 100 
+consecutively. 
+
+To place the numbers, that will be added simply by touching the 
+csella want, you ought to respect two simple rules: 
+1) To insert a number in horizontal or vertical, allow two 
+empty boxes than the box is located in the last number; 
+2) To insert a number diagonally you must leave one box 
+empty. 
+
+The button "Help" will help when we know what moves to do: 
+touching will be highlighted boxes available, provided that there 
+are, to continue the game. 
+
+Where there noticing that he had made a wrong move, we 
+back (to a maximum of three moves) tapping again 
+box where we put the last number, so to move 
+above. This will not be possible when it comes to a position 
+which are no longer available legal moves, in which case the game 
+ends. 
+
+The button "Reset" will serve to start a new game, erasing 
+all the numbers already placed.
