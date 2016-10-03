@@ -64,8 +64,9 @@ protocol Sharable {
 
 extension ViewController: Sharable {
     func share(number: Int) -> UIViewController {
-        let text = "Ho fatto \(number) giocando ad i100!"
-        let activityViewController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+        let text = "Ho fatto \(number) giocando ad i100! Prova a battermi!"
+        let url = URL(string: "https://itunes.apple.com/nl/app/i100/id352554795")
+        let activityViewController = UIActivityViewController(activityItems: [text, url], applicationActivities: nil)
         return activityViewController
     }
 }
