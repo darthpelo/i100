@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Crashlytics
 
 protocol BottomViewDelegate: class {
     func requestReset()
@@ -52,10 +53,14 @@ class BottomView: UIView {
     //MARK: Delegate
     func resetTapped() {
         delegate?.requestReset()
+        // TODO: Track the user action that is important for you.
+        Answers.logContentView(withName: "Reset", contentType: "Action", contentId: nil)
     }
     
     func infoTapped() {
         delegate?.requestInfo()
+        // TODO: Track the user action that is important for you.
+        Answers.logContentView(withName: "Info", contentType: "Text", contentId: nil)
     }
 }
 

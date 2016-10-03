@@ -42,7 +42,10 @@ extension ViewController: Notifications {
     
     func catchNotification(notification:NSNotification) {
         titleLabel.text = NSLocalizedString("Game Over", comment: "")
-        self.present(share(number: GameService.shared.getGameScore()), animated: true, completion: nil)
+        anImportantUserAction(name: "GameOver")
+        self.present(share(number: GameService.shared.getGameScore()), animated: true, completion: { [weak self] in
+            self!.anImportantUserAction(name: "SahreScore")
+        })
     }
 }
 

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     public func applicationDidFinishLaunching(_ application: UIApplication) {
+        Fabric.with([Crashlytics.self])
         GameService.shared = GameService(chessboard: ChessBoard())
     }
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Crashlytics
 
 enum NotificationName: String {
     case GameOver
@@ -54,8 +55,20 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
                 previous.switchBackground(from: UIColor.white, to: UIColor.black)
             }
             scoreLabel(with: String(GameService.shared.getMaxGameScore()))
+            anImportantUserAction(name: "Move")
         }
     }
+}
+
+extension ViewController {
+    func anImportantUserAction(name aName: String) {
+        
+        // TODO: Move this method and customize the name and parameters to track your key metrics
+        //       Use your own string attributes to track common values over time
+        //       Use your own number attributes to track median value over time
+        Answers.logCustomEvent(withName: aName)
+    }
+
 }
 
 protocol Sharable {

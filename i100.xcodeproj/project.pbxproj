@@ -29,6 +29,10 @@
 		D9A5DAB81D7B77A7007DAF93 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5DAB51D7B77A7007DAF93 /* GameService.swift */; };
 		D9A5DABA1D7B77C6007DAF93 /* gameServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5DAB91D7B77C6007DAF93 /* gameServiceTests.swift */; };
 		D9B66CA81D7DB9C80023A855 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B66CA71D7DB9C80023A855 /* UIViewExtensions.swift */; };
+		D9B77DFD1DA3003F00909E14 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B77DFB1DA3003F00909E14 /* Fabric.framework */; };
+		D9B77DFE1DA3003F00909E14 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B77DFC1DA3003F00909E14 /* Crashlytics.framework */; };
+		D9B77DFF1DA3016400909E14 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B77DFC1DA3003F00909E14 /* Crashlytics.framework */; };
+		D9B77E001DA3016500909E14 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B77DFC1DA3003F00909E14 /* Crashlytics.framework */; };
 		D9E7208A1D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E720891D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift */; };
 		D9E7208B1D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E720891D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift */; };
 		D9E7208C1D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E720891D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift */; };
@@ -75,6 +79,8 @@
 		D9A5DAB51D7B77A7007DAF93 /* GameService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
 		D9A5DAB91D7B77C6007DAF93 /* gameServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameServiceTests.swift; sourceTree = "<group>"; };
 		D9B66CA71D7DB9C80023A855 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		D9B77DFB1DA3003F00909E14 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		D9B77DFC1DA3003F00909E14 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		D9E720891D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessBoardCollectionViewCell.swift; sourceTree = "<group>"; };
 		D9E7208D1D7CBDEC0058EEF1 /* BottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		D9E8F80C1DA1AB39004B65D3 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
@@ -86,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B77DFE1DA3003F00909E14 /* Crashlytics.framework in Frameworks */,
+				D9B77DFD1DA3003F00909E14 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B77DFF1DA3016400909E14 /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B77E001DA3016500909E14 /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +132,8 @@
 				D978B2B41D7AC56C00EC5301 /* i100Tests */,
 				D978B2BF1D7AC56C00EC5301 /* i100UITests */,
 				D978B29E1D7AC56C00EC5301 /* Products */,
+				D9B77DFB1DA3003F00909E14 /* Fabric.framework */,
+				D9B77DFC1DA3003F00909E14 /* Crashlytics.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,6 +236,7 @@
 				D978B2991D7AC56C00EC5301 /* Sources */,
 				D978B29A1D7AC56C00EC5301 /* Frameworks */,
 				D978B29B1D7AC56C00EC5301 /* Resources */,
+				D9B77DFA1DA3001400909E14 /* Fabric Script */,
 			);
 			buildRules = (
 			);
@@ -345,6 +358,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D9B77DFA1DA3001400909E14 /* Fabric Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Fabric Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run f92187a6ad939c214258ffa2c9f03c6cc0a3d74d cf62acf20c611275d4126ffa3579a0861887c27a7a90007def0a96e8c0519d01";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D978B2991D7AC56C00EC5301 /* Sources */ = {
@@ -534,6 +564,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = GK5S624D99;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = i100/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alessioroberto.i100;
@@ -551,6 +585,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = GK5S624D99;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = i100/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alessioroberto.i100;
@@ -566,6 +604,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = GK5S624D99;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = i100Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alessioroberto.i100Tests;
@@ -580,6 +622,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = GK5S624D99;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = i100Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alessioroberto.i100Tests;
@@ -593,6 +639,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = GK5S624D99;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = i100UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alessioroberto.i100UITests;
@@ -606,6 +656,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = GK5S624D99;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = i100UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alessioroberto.i100UITests;
