@@ -13,6 +13,18 @@ enum NotificationName: String {
     case GameOver
 }
 
+extension ViewController {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+}
+
+protocol Notifications {
+    func addObserver(name aName: NotificationName)
+    
+    func catchNotification(notification:NSNotification)
+}
+
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 100
@@ -46,9 +58,14 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
 }
 
-extension ViewController {
-    func scoreLabel(with text: String) {
-        buttonView.scoreLabel(text:text)
-    }
+protocol Sharable {
+    func share(number: Int) -> UIViewController
 }
 
+extension ViewController: Sharable {
+    func share(number: Int) -> UIViewController {
+        let text = "Ho fatto \(number) giocando ad i100!"
+        let activityViewController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+        return activityViewController
+    }
+}

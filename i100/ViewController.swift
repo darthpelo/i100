@@ -24,19 +24,31 @@ class ViewController: UIViewController {
         buttonView.delegate = self
         buttonView.setupView()
 
-        let nc = NotificationCenter.default
-        nc.addObserver(self,
-                       selector: #selector(ViewController.catchNotification),
-                       name: NSNotification.Name(rawValue: NotificationName.GameOver.rawValue),
-                       object: nil)
+        addObserver(name: .GameOver)
     }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+}
+
+extension ViewController: Notifications {
+    func addObserver(name aName: NotificationName) {
+        switch aName {
+        case .GameOver:
+            let nc = NotificationCenter.default
+            nc.addObserver(self,
+                           selector: #selector(ViewController.catchNotification),
+                           name: NSNotification.Name(rawValue: aName.rawValue),
+                           object: nil)
+        }
     }
     
     func catchNotification(notification:NSNotification) {
         titleLabel.text = NSLocalizedString("Game Over", comment: "")
+        self.present(share(number: GameService.shared.getGameScore()), animated: true, completion: nil)
+    }
+}
+
+extension ViewController {
+    func scoreLabel(with text: String) {
+        buttonView.scoreLabel(text:text)
     }
 }
 
