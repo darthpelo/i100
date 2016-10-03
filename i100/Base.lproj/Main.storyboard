@@ -222,12 +222,12 @@
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B8a-Rz-26O">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Aim of the game is to fill as much as possible a square with consecutive numbers from 1 to 100 if you choose the 10x10 square, from 1 to 81 if you choose the square 9x9 and so 'on up to 5x5 square.
-    You can choose one of two methods to fill the square: the 100, or the move of the horse move in the game. It starts from any box.
-- For the 2 rules of the 100 move in the game are these:
+                                <string key="text">Aim of the game is to fill as much as possible a square with consecutive numbers from 1 to 100.
+    How to fill the square?
+These are the 2 rules of the 100 move:
 1) if you are moving horizontally or vertically, it misses two boxes and you go on the third,
 2) if you are moving diagonally, you jump one box and you go on the second.
-- For the move of the horse it is moving as the horse of chess that is: each turn you move 2 squares horizontally and one vertically, or 1 horizontal and 2 vertical.
+
    
 Good fun!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
