@@ -19,26 +19,20 @@ platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
 
-    build_number = Time.new.strftime("%y%m%d")
+    build_number = Time.new.strftime("%y%m%d%H%M")
     increment_build_number(
         build_number: build_number
     )
-  end
-
-  desc "Runs all the tests"
-  lane :test do
-    scan
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :testflight do
     # match(type: "appstore") # more information: https://codesigning.guide
+    scan # Runs all the tests
     gym(scheme: "i100") # Build your app - more options available
     pilot(
-      changelog:"Nuova versione",
-      distribute_internal: true,
-      distribute_external: true
+      changelog:"Nuova versione"
     )
 
     # sh "your_script.sh"
