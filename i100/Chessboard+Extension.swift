@@ -12,6 +12,7 @@ import Crashlytics
 
 enum NotificationName: String {
     case GameOver
+    case Victory
 }
 
 extension ViewController {
@@ -69,6 +70,12 @@ extension ViewController {
         Answers.logCustomEvent(withName: aName)
     }
 
+    func victoryAction() {
+        Answers.logLevelEnd("Level1",
+                            score: GameService.shared.getGameScore() as NSNumber?,
+                            success: true,
+                            customAttributes: [:])
+    }
 }
 
 protocol Sharable {

@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         buttonView.setupView()
 
         addObserver(name: .GameOver)
+        addObserver(name: .Victory)
     }
 }
 
@@ -37,15 +38,31 @@ extension ViewController: Notifications {
                            selector: #selector(ViewController.catchNotification),
                            name: NSNotification.Name(rawValue: aName.rawValue),
                            object: nil)
+        case .Victory:
+            let nc = NotificationCenter.default
+            nc.addObserver(self,
+                           selector: #selector(ViewController.catchNotification),
+                           name: NSNotification.Name(rawValue: aName.rawValue),
+                           object: nil)
         }
     }
     
     func catchNotification(notification:NSNotification) {
-        titleLabel.text = NSLocalizedString("Game Over", comment: "")
-        anImportantUserAction(name: "GameOver")
-        self.present(share(number: GameService.shared.getGameScore()), animated: true, completion: { [weak self] in
-            self!.anImportantUserAction(name: "SahreScore")
-        })
+        if notification.name.rawValue == NotificationName.GameOver.rawValue {
+            titleLabel.text = NSLocalizedString("Game Over", comment: "")
+            anImportantUserAction(name: "GameOver")
+            victoryAction()
+            self.present(share(number: GameService.shared.getGameScore()), animated: true, completion: { [weak self] in
+                self!.anImportantUserAction(name: "SahreScore")
+                })
+        } else {
+            titleLabel.text = NSLocalizedString("Victory!!", comment: "")
+            anImportantUserAction(name: "Victory")
+            victoryAction()
+            self.present(share(number: GameService.shared.getGameScore()), animated: true, completion: { [weak self] in
+                self!.anImportantUserAction(name: "SahreScore")
+                })
+        }
     }
 }
 
