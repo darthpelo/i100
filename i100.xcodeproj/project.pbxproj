@@ -59,11 +59,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D91905FE1DA433F9002B583A /* it */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = it; path = it.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D91905FF1DA433F9002B583A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D96CB7F01D7B10E4008109E4 /* ChessBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessBoard.swift; sourceTree = "<group>"; };
 		D978B29D1D7AC56C00EC5301 /* i100.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = i100.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D978B2A01D7AC56C00EC5301 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D978B2A21D7AC56C00EC5301 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D978B2A51D7AC56C00EC5301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D978B2A71D7AC56C00EC5301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D978B2AA1D7AC56C00EC5301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D978B2AC1D7AC56C00EC5301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,7 +84,6 @@
 		D9B77DFC1DA3003F00909E14 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		D9E720891D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessBoardCollectionViewCell.swift; sourceTree = "<group>"; };
 		D9E7208D1D7CBDEC0058EEF1 /* BottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
-		D9E8F80C1DA1AB39004B65D3 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 		D9E8F80D1DA1AB39004B65D3 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -442,8 +442,8 @@
 		D978B2A41D7AC56C00EC5301 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D978B2A51D7AC56C00EC5301 /* Base */,
-				D9E8F80C1DA1AB39004B65D3 /* it */,
+				D91905FE1DA433F9002B583A /* it */,
+				D91905FF1DA433F9002B583A /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
