@@ -18,7 +18,9 @@ class i100UITests: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+        let app = XCUIApplication()
+        setupSnapshot(app)
+        app.launch()
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
@@ -39,6 +41,19 @@ class i100UITests: XCTestCase {
         XCTAssert(app.buttons["reset"].exists)
         
         XCTAssert(app.staticTexts["score"].exists)
+        
+        snapshot("0Launch")
+        
+        app.staticTexts["i100"].tap()
+                
+        let collectionViewsQuery = app.collectionViews
+        collectionViewsQuery.children(matching: .cell).element(boundBy: 0).otherElements.children(matching: .staticText).element.tap()
+        collectionViewsQuery.children(matching: .cell).element(boundBy: 3).otherElements.children(matching: .staticText).element.tap()
+        collectionViewsQuery.children(matching: .cell).element(boundBy: 33).otherElements.children(matching: .staticText).element.tap()
+        collectionViewsQuery.children(matching: .cell).element(boundBy: 63).otherElements.children(matching: .staticText).element.tap()
+        collectionViewsQuery.children(matching: .cell).element(boundBy: 85).otherElements.children(matching: .staticText).element.tap()
+        
+        snapshot("1Game")
     }
     
 }

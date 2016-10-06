@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D91906151DA446F5002B583A /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91906131DA446E6002B583A /* SnapshotHelper.swift */; };
+		D91906161DA447E4002B583A /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B77DFB1DA3003F00909E14 /* Fabric.framework */; };
+		D91906171DA447E4002B583A /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B77DFB1DA3003F00909E14 /* Fabric.framework */; };
 		D96CB7F11D7B10E4008109E4 /* ChessBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96CB7F01D7B10E4008109E4 /* ChessBoard.swift */; };
 		D96CB7F21D7B1103008109E4 /* ChessBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96CB7F01D7B10E4008109E4 /* ChessBoard.swift */; };
 		D96CB7F31D7B1104008109E4 /* ChessBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96CB7F01D7B10E4008109E4 /* ChessBoard.swift */; };
@@ -61,6 +64,7 @@
 /* Begin PBXFileReference section */
 		D91905FE1DA433F9002B583A /* it */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = it; path = it.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D91905FF1DA433F9002B583A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D91906131DA446E6002B583A /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		D96CB7F01D7B10E4008109E4 /* ChessBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessBoard.swift; sourceTree = "<group>"; };
 		D978B29D1D7AC56C00EC5301 /* i100.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = i100.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D978B2A01D7AC56C00EC5301 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9B77DFF1DA3016400909E14 /* Crashlytics.framework in Frameworks */,
+				D91906171DA447E4002B583A /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9B77E001DA3016500909E14 /* Crashlytics.framework in Frameworks */,
+				D91906161DA447E4002B583A /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +156,7 @@
 		D978B29F1D7AC56C00EC5301 /* i100 */ = {
 			isa = PBXGroup;
 			children = (
+				D91906131DA446E6002B583A /* SnapshotHelper.swift */,
 				D978B2CE1D7AC6F100EC5301 /* Chessboard */,
 				D97F3BE31D99CD3300200C56 /* Info */,
 				D96CB7EF1D7B10C0008109E4 /* Model Layer */,
@@ -420,6 +427,7 @@
 				D9E720901D7CBDEC0058EEF1 /* BottomView.swift in Sources */,
 				D9E7208C1D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift in Sources */,
 				D978B2D41D7AC72200EC5301 /* Chessboard+Extension.swift in Sources */,
+				D91906151DA446F5002B583A /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
