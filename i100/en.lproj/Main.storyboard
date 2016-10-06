@@ -220,7 +220,7 @@
                                     <constraint firstItem="vSN-dz-XPH" firstAttribute="top" secondItem="KCo-fg-a4r" secondAttribute="top" constant="19" id="q85-qQ-kM3"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B8a-Rz-26O">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8a-Rz-26O">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Aim of the game is to fill as much as possible a square with consecutive numbers from 1 to 100.
     How to fill the square?
