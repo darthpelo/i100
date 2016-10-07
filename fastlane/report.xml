@@ -3,24 +3,27 @@
   <testsuite name="fastlane.lanes">
     
       
-      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.000745">
+      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.0005">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.000346">
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.00022">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: increment_build_number" time="1.07521">
+      <testcase classname="fastlane.lanes" name="2: increment_build_number" time="2.403139">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: snapshot" time="0.615935">
+      <testcase classname="fastlane.lanes" name="3: gym" time="47.463614">
         
-          <failure message="/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/lib/fastlane/actions/actions_helper.rb:33:in `execute_action'&#10;/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/lib/fastlane/runner.rb:187:in `block in execute_action'&#10;/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/lib/fastlane/runner.rb:186:in `chdir'&#10;/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/lib/fastlane/runner.rb:186:in `execute_action'&#10;/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/lib/fastlane/runner.rb:112:in `trigger_action_by_name'&#10;/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/lib/fastlane/fast_file.rb:140:in `method_missing'&#10;Fastfile:44:in `block (2 levels) in parsing_binding'&#10;/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/lib/fastlane/lane.rb:33:in `call'&#10;/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/lib/fastlane/lane.rb:33:in `call'&#10;/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/lib/fastlane/runner.rb:49:in `block in execute'&#10;/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/lib/fastlane/runner.rb:45:in `chdir'&#10;/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/lib/fastlane/runner.rb:45:in `execute'&#10;/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/lib/fastlane/lane_manager.rb:46:in `cruise_lane'&#10;/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/lib/fastlane/command_line_handler.rb:30:in `handle'&#10;/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/lib/fastlane/commands_generator.rb:49:in `block (2 levels) in run'&#10;/Library/Ruby/Gems/2.0.0/gems/commander-4.4.0/lib/commander/command.rb:178:in `call'&#10;/Library/Ruby/Gems/2.0.0/gems/commander-4.4.0/lib/commander/command.rb:178:in `call'&#10;/Library/Ruby/Gems/2.0.0/gems/commander-4.4.0/lib/commander/command.rb:153:in `run'&#10;/Library/Ruby/Gems/2.0.0/gems/commander-4.4.0/lib/commander/runner.rb:444:in `run_active_command'&#10;/Library/Ruby/Gems/2.0.0/gems/fastlane_core-0.52.0/lib/fastlane_core/ui/fastlane_runner.rb:36:in `run!'&#10;/Library/Ruby/Gems/2.0.0/gems/commander-4.4.0/lib/commander/delegates.rb:15:in `run!'&#10;/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/lib/fastlane/commands_generator.rb:246:in `run'&#10;/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/lib/fastlane/commands_generator.rb:20:in `start'&#10;/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/lib/fastlane/cli_tools_distributor.rb:58:in `take_off'&#10;/usr/local/lib/fastlane_lib/bundle/lib/ruby/gems/2.2.0/gems/fastlane-1.104.0/bin/fastlane:5:in `&lt;top (required)&gt;'&#10;/usr/local/lib/fastlane_lib/bundle/bin/fastlane:22:in `load'&#10;/usr/local/lib/fastlane_lib/bundle/bin/fastlane:22:in `&lt;main&gt;'&#10;&#10;Device 'iPhone 4S' not in list of available simulators 'iPhone 5, iPhone 5s, iPhone 6, iPhone 6 Plus, iPhone 6s, iPhone 6s Plus, iPhone 7, iPhone 7 Plus, iPhone SE, iPad Retina, iPad Air, iPad Air 2, iPad Pro (9.7 inch), iPad Pro (12.9 inch), Apple TV 1080p, Apple Watch - 38mm, Apple Watch - 42mm, Apple Watch Series 2 - 38mm, Apple Watch Series 2 - 42mm'" />
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: deliver" time="76.953389">
         
       </testcase>
     

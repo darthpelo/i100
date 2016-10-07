@@ -52,16 +52,10 @@ platform :ios do
 
   desc "Deploy a new version to the App Store"
   lane :release do
-    # match(type: "appstore")
-    # snapshot(
-    #     languages:["en_US","it_IT"],
-    #     stop_after_first_error: true,
-    #     verbose: true
-    # )
     gym(scheme: "i100") # Build your app - more options available
     deliver(
       force: true,
-      app_version: "2.0.0"
+      app_version: "2.0.1"
     )
     # frameit
   end
