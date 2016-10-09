@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnV-qX-tk7">
@@ -134,16 +134,51 @@
                                     <constraint firstItem="0QZ-K5-pFm" firstAttribute="top" relation="lessThanOrEqual" secondItem="lnV-qX-tk7" secondAttribute="top" constant="80" id="wjh-fn-EhA"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owy-6n-Ra9" customClass="AlertView" customModule="i100" customModuleProvider="target">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Aq8-1A-LCJ">
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="3fm-BR-5Hq"/>
+                                    <constraint firstItem="Aq8-1A-LCJ" firstAttribute="centerX" secondItem="owy-6n-Ra9" secondAttribute="centerX" id="4LR-cb-9Hj"/>
+                                    <constraint firstItem="Aq8-1A-LCJ" firstAttribute="height" secondItem="owy-6n-Ra9" secondAttribute="height" id="4QV-ti-Rm3"/>
+                                    <constraint firstItem="Aq8-1A-LCJ" firstAttribute="width" secondItem="owy-6n-Ra9" secondAttribute="width" id="5EB-KN-9hk"/>
+                                    <constraint firstItem="Aq8-1A-LCJ" firstAttribute="centerY" secondItem="owy-6n-Ra9" secondAttribute="centerY" id="GmK-2E-hwo"/>
+                                    <constraint firstAttribute="width" constant="240" id="mKe-hj-x7p"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="alertLabel" destination="Aq8-1A-LCJ" id="H7Q-ty-T0y"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="lnV-qX-tk7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M5C-Ok-aSI"/>
+                            <constraint firstItem="owy-6n-Ra9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ubm-7b-W9a"/>
                             <constraint firstItem="lnV-qX-tk7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="bKG-Wf-AFG"/>
+                            <constraint firstItem="owy-6n-Ra9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dIf-VN-48q"/>
                             <constraint firstItem="lnV-qX-tk7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-16" id="enf-uK-ZVL"/>
                             <constraint firstItem="lnV-qX-tk7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f7i-np-yDk"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="alertView" destination="owy-6n-Ra9" id="Jj3-JQ-c5r"/>
                         <outlet property="buttonView" destination="XEb-nz-HFt" id="pxC-gC-3y6"/>
                         <outlet property="chessboardCollectionView" destination="0QZ-K5-pFm" id="bcv-We-32K"/>
                         <segue destination="Ji4-7f-wQe" kind="presentation" identifier="InfoVC" id="XS7-ct-0sP"/>
@@ -162,7 +197,7 @@
                         <viewControllerLayoutGuide type="bottom" id="94B-vU-xBz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1JE-c5-6uC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCo-fg-a4r">
