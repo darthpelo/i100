@@ -57,6 +57,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
             }
             scoreLabel(with: String(GameService.shared.getMaxGameScore()))
             anImportantUserAction(name: "Move")
+            GameService.shared.saveMatrix()
         }
     }
 }

@@ -31,10 +31,12 @@ class gameServiceTests: XCTestCase {
         GameService.shared.update(score: score)
         XCTAssertEqual(GameService.shared.userScore(), score)
         
-        let chessBoard = ChessBoard()
-        let matrix = chessBoard.getMatrix()
-        GameService.shared.update(matrix: matrix)
-        XCTAssertEqual(GameService.shared.userMatrix()!, matrix)
+//        var chessBoard = ChessBoard()
+//        try! chessBoard.setCell(at: 0)
+//        GameService.shared.saveMatrix()
+//        let matrix = GameService.shared.loadMatrix()
+//        XCTAssertNotNil(matrix)
+//        XCTAssertEqual(.Full, matrix![0])
     }
     
     func testGamePlay() {

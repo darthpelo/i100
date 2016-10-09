@@ -24,6 +24,9 @@ class ViewController: UIViewController {
         buttonView.delegate = self
         buttonView.setupView()
 
+        //TODO: clean logic
+        self.chessboardCollectionView.reloadData()
+        
         addObserver(name: .GameOver)
         addObserver(name: .Victory)
     }

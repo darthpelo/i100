@@ -14,8 +14,16 @@ import Foundation
 public final class GameService {
     var chessboard: ChessBoard
     
-    init(chessboard: ChessBoard) {
+    init(chessboard: ChessBoard) /*throws*/ {
         self.chessboard = chessboard
+        
+//        if let matrix = self.loadMatrix() {
+//            for i in 0..<100 {
+//                if matrix[i] == .Full {
+//                    try self.chessboard.setCell(at: i)
+//                }
+//            }
+//        }
     }
     
     fileprivate let userScoreKey = "com.alessioroberto.i100.userScore"
@@ -49,7 +57,7 @@ extension GameService {
     /// Load from local storage the last saved status of the matrix
     ///
     /// - returns: The matrix instance
-    public func userMatrix() -> ChessBoardType? {
+    public func loadMatrix() -> ChessBoardType? {
         guard let obj = UserDefaults.standard.dictionary(forKey: userMatrixKey) else {
             return nil
         }
@@ -62,12 +70,12 @@ extension GameService {
     
     
     /// Update to local storege the last status of the chessboard
-    ///
-    /// - parameter matrix: The matrix instance to save
-    public func update(matrix: ChessBoardType) {
+    public func saveMatrix() {
         var tmp: [String: Int] = [:]
-        for (key, value) in matrix {
-            tmp["\(key)"] = value.rawValue
+        let matrix = chessboard.getMatrix()
+        for key in matrix {
+            let raw = key.value.rawValue
+            tmp["\(key.key)"] = raw
         }
         let obj = tmp as AnyObject
         UserDefaults.standard.set(obj, forKey: userMatrixKey)
