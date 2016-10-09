@@ -27,6 +27,7 @@
 		D978B2D61D7AC7FC00EC5301 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978B2A21D7AC56C00EC5301 /* ViewController.swift */; };
 		D97F3BE61D99CD5A00200C56 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F3BE51D99CD5A00200C56 /* InfoViewController.swift */; };
 		D97F3BE81D99CD6F00200C56 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F3BE71D99CD6F00200C56 /* InfoViewModel.swift */; };
+		D9A09D111DAADF6800D9CE7C /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A09D101DAADF6800D9CE7C /* AlertView.swift */; };
 		D9A5DAB61D7B77A7007DAF93 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5DAB51D7B77A7007DAF93 /* GameService.swift */; };
 		D9A5DAB71D7B77A7007DAF93 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5DAB51D7B77A7007DAF93 /* GameService.swift */; };
 		D9A5DAB81D7B77A7007DAF93 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5DAB51D7B77A7007DAF93 /* GameService.swift */; };
@@ -81,6 +82,7 @@
 		D978B2D11D7AC72200EC5301 /* Chessboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Chessboard+Extension.swift"; sourceTree = "<group>"; };
 		D97F3BE51D99CD5A00200C56 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		D97F3BE71D99CD6F00200C56 /* InfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
+		D9A09D101DAADF6800D9CE7C /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		D9A5DAB51D7B77A7007DAF93 /* GameService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
 		D9A5DAB91D7B77C6007DAF93 /* gameServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameServiceTests.swift; sourceTree = "<group>"; };
 		D9B66CA71D7DB9C80023A855 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			children = (
 				D9E720891D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift */,
 				D9E7208D1D7CBDEC0058EEF1 /* BottomView.swift */,
+				D9A09D101DAADF6800D9CE7C /* AlertView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				D97F3BE81D99CD6F00200C56 /* InfoViewModel.swift in Sources */,
 				D978B2A31D7AC56C00EC5301 /* ViewController.swift in Sources */,
 				D96CB7F11D7B10E4008109E4 /* ChessBoard.swift in Sources */,
+				D9A09D111DAADF6800D9CE7C /* AlertView.swift in Sources */,
 				D9B66CA81D7DB9C80023A855 /* UIViewExtensions.swift in Sources */,
 				D9A5DAB61D7B77A7007DAF93 /* GameService.swift in Sources */,
 				D97F3BE61D99CD5A00200C56 /* InfoViewController.swift in Sources */,
