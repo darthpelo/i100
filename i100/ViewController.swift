@@ -11,11 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet fileprivate weak var chessboardCollectionView: UICollectionView!
-    @IBOutlet fileprivate weak var titleLabel: UILabel! {
-        didSet {
-            titleLabel.text =  NSLocalizedString("i100", comment: "")
-        }
-    }
+
     @IBOutlet weak var buttonView: BottomView!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,14 +48,14 @@ extension ViewController: Notifications {
     
     func catchNotification(notification:NSNotification) {
         if notification.name.rawValue == NotificationName.GameOver.rawValue {
-            titleLabel.text = NSLocalizedString("Game Over", comment: "")
+//            titleLabel.text = NSLocalizedString("Game Over", comment: "")
             anImportantUserAction(name: "GameOver")
             victoryAction()
             self.present(share(number: GameService.shared.getGameScore()), animated: true, completion: { [weak self] in
                 self!.anImportantUserAction(name: "SahreScore")
                 })
         } else {
-            titleLabel.text = NSLocalizedString("Victory!!", comment: "")
+//            titleLabel.text = NSLocalizedString("Victory!!", comment: "")
             anImportantUserAction(name: "Victory")
             victoryAction()
             self.present(share(number: GameService.shared.getGameScore()), animated: true, completion: { [weak self] in
@@ -79,7 +75,7 @@ extension ViewController: BottomViewDelegate {
     func requestReset() {
         GameService.shared.resetData()
         chessboardCollectionView.reloadData()
-        titleLabel.text =  NSLocalizedString("i100", comment: "")
+//        titleLabel.text =  NSLocalizedString("i100", comment: "")
     }
     
     func requestInfo() {
