@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnV-qX-tk7">
@@ -88,6 +88,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoH-l0-hiw">
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="42" id="8RO-kP-204"/>
                                                     <constraint firstAttribute="height" constant="42" id="mJp-WR-dMb"/>
@@ -106,15 +107,26 @@
                                                         <real key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="G1u-C3-WWh" appends="YES" id="TQD-8z-i1e"/>
+                                                </connections>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Punteggio massimo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LrV-iu-Cb4">
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="jp2-X8-FFZ" firstAttribute="top" secondItem="KoH-l0-hiw" secondAttribute="bottom" id="IpZ-19-K8D"/>
+                                            <constraint firstItem="jp2-X8-FFZ" firstAttribute="top" secondItem="KoH-l0-hiw" secondAttribute="bottom" constant="40" id="IpZ-19-K8D"/>
                                             <constraint firstItem="KoH-l0-hiw" firstAttribute="centerX" secondItem="XEb-nz-HFt" secondAttribute="centerX" id="LAr-0v-xEN"/>
                                             <constraint firstAttribute="bottom" secondItem="jp2-X8-FFZ" secondAttribute="bottom" id="POH-8x-5se"/>
+                                            <constraint firstItem="LrV-iu-Cb4" firstAttribute="centerX" secondItem="XEb-nz-HFt" secondAttribute="centerX" id="Zt5-Vm-qUw"/>
                                             <constraint firstItem="KoH-l0-hiw" firstAttribute="top" secondItem="XEb-nz-HFt" secondAttribute="top" constant="8" id="b31-eq-FCm"/>
                                             <constraint firstItem="jp2-X8-FFZ" firstAttribute="centerX" secondItem="XEb-nz-HFt" secondAttribute="centerX" id="hb3-bN-biA"/>
                                             <constraint firstItem="jp2-X8-FFZ" firstAttribute="width" secondItem="XEb-nz-HFt" secondAttribute="width" id="lXv-53-E19"/>
+                                            <constraint firstItem="LrV-iu-Cb4" firstAttribute="top" secondItem="KoH-l0-hiw" secondAttribute="bottom" id="v6P-PC-Rbj"/>
+                                            <constraint firstItem="jp2-X8-FFZ" firstAttribute="top" secondItem="LrV-iu-Cb4" secondAttribute="bottom" constant="19" id="vsW-wL-3Xm"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="infoButton" destination="kab-bB-qQP" id="eYU-Cf-CfD"/>
@@ -185,6 +197,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="G1u-C3-WWh">
+                    <connections>
+                        <action selector="pressScoreLabel:" destination="BYZ-38-t0r" id="bQA-1M-IUz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="116" y="122.78860569715144"/>
         </scene>
@@ -197,7 +214,7 @@
                         <viewControllerLayoutGuide type="bottom" id="94B-vU-xBz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1JE-c5-6uC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCo-fg-a4r">

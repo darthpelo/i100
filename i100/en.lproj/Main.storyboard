@@ -107,14 +107,22 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfc-Vl-rtB">
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="jfc-Vl-rtB" firstAttribute="top" secondItem="KoH-l0-hiw" secondAttribute="bottom" constant="8" id="1qT-Km-x83"/>
                                             <constraint firstAttribute="bottom" secondItem="jp2-X8-FFZ" secondAttribute="bottom" id="BYh-Kk-Nz2"/>
                                             <constraint firstItem="jp2-X8-FFZ" firstAttribute="centerX" secondItem="XEb-nz-HFt" secondAttribute="centerX" id="H9g-PQ-cOf"/>
                                             <constraint firstItem="jp2-X8-FFZ" firstAttribute="width" secondItem="XEb-nz-HFt" secondAttribute="width" id="KTt-89-Fji"/>
                                             <constraint firstItem="KoH-l0-hiw" firstAttribute="centerX" secondItem="XEb-nz-HFt" secondAttribute="centerX" id="Wwr-da-Yk3"/>
                                             <constraint firstItem="KoH-l0-hiw" firstAttribute="top" secondItem="XEb-nz-HFt" secondAttribute="top" constant="8" id="Xgq-GZ-0QH"/>
-                                            <constraint firstItem="jp2-X8-FFZ" firstAttribute="top" secondItem="KoH-l0-hiw" secondAttribute="bottom" id="niW-Mc-3Nl"/>
+                                            <constraint firstItem="jp2-X8-FFZ" firstAttribute="top" secondItem="KoH-l0-hiw" secondAttribute="bottom" constant="40" id="niW-Mc-3Nl"/>
+                                            <constraint firstItem="jp2-X8-FFZ" firstAttribute="top" secondItem="jfc-Vl-rtB" secondAttribute="bottom" constant="11" id="uPn-tZ-0RH"/>
+                                            <constraint firstItem="jfc-Vl-rtB" firstAttribute="centerX" secondItem="XEb-nz-HFt" secondAttribute="centerX" id="wLP-c2-yOJ"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="infoButton" destination="kab-bB-qQP" id="eYU-Cf-CfD"/>

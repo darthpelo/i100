@@ -16,18 +16,24 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var alertView: AlertView!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         buttonView.delegate = self
         buttonView.setupView()
-
+        
         //TODO: clean logic
         self.chessboardCollectionView.reloadData()
         
         addObserver(name: .GameOver)
         addObserver(name: .Victory)
     }
+    
+//    @IBAction func pressScoreLabel(_ sender: AnyObject) {
+//        self.present(share(number: GameService.shared.getGameScore()), animated: true, completion: { [weak self] in
+//            self!.anImportantUserAction(name: "SahreScore")
+//            })
+//    }
 }
 
 extension ViewController: Notifications {

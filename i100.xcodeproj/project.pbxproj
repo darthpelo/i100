@@ -43,6 +43,8 @@
 		D9E7208E1D7CBDEC0058EEF1 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7208D1D7CBDEC0058EEF1 /* BottomView.swift */; };
 		D9E7208F1D7CBDEC0058EEF1 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7208D1D7CBDEC0058EEF1 /* BottomView.swift */; };
 		D9E720901D7CBDEC0058EEF1 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7208D1D7CBDEC0058EEF1 /* BottomView.swift */; };
+		D9F07C661DB6B6BA00E23FBA /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A09D101DAADF6800D9CE7C /* AlertView.swift */; };
+		D9F07C671DB6B6BB00E23FBA /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A09D101DAADF6800D9CE7C /* AlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -411,6 +413,7 @@
 			files = (
 				D9E7208B1D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift in Sources */,
 				D978B2D51D7AC7FC00EC5301 /* ViewController.swift in Sources */,
+				D9F07C661DB6B6BA00E23FBA /* AlertView.swift in Sources */,
 				D96CB7F21D7B1103008109E4 /* ChessBoard.swift in Sources */,
 				D9E7208F1D7CBDEC0058EEF1 /* BottomView.swift in Sources */,
 				D9A5DAB71D7B77A7007DAF93 /* GameService.swift in Sources */,
@@ -426,6 +429,7 @@
 			files = (
 				D978B2D61D7AC7FC00EC5301 /* ViewController.swift in Sources */,
 				D96CB7F31D7B1104008109E4 /* ChessBoard.swift in Sources */,
+				D9F07C671DB6B6BB00E23FBA /* AlertView.swift in Sources */,
 				D9A5DAB81D7B77A7007DAF93 /* GameService.swift in Sources */,
 				D978B2C11D7AC56C00EC5301 /* i100UITests.swift in Sources */,
 				D9E720901D7CBDEC0058EEF1 /* BottomView.swift in Sources */,
