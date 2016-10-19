@@ -8,22 +8,22 @@
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.000238">
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.000208">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: increment_build_number" time="2.409175">
+      <testcase classname="fastlane.lanes" name="2: increment_build_number" time="1.09518">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: gym" time="55.647607">
+      <testcase classname="fastlane.lanes" name="3: gym" time="51.462452">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: pilot" time="383.334941">
+      <testcase classname="fastlane.lanes" name="4: deliver" time="138.16448">
         
       </testcase>
     

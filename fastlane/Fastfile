@@ -45,7 +45,7 @@ platform :ios do
         languages:["en_US","it_IT"],
         stop_after_first_error: true,
         verbose: false,
-        devices:["iPhone 4S"],
+        devices:["iPhone 5s", "iPhone 6", "iPhone 7 Plus"],
         clean: true
     )
   end
@@ -55,7 +55,7 @@ platform :ios do
     gym(scheme: "i100") # Build your app - more options available
     deliver(
       force: true,
-      app_version: "2.0.1"
+      app_version: "2.0.2"
     )
     # frameit
   end

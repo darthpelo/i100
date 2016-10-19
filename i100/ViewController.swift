@@ -28,12 +28,6 @@ class ViewController: UIViewController {
         addObserver(name: .GameOver)
         addObserver(name: .Victory)
     }
-    
-//    @IBAction func pressScoreLabel(_ sender: AnyObject) {
-//        self.present(share(number: GameService.shared.getGameScore()), animated: true, completion: { [weak self] in
-//            self!.anImportantUserAction(name: "SahreScore")
-//            })
-//    }
 }
 
 extension ViewController: Notifications {
@@ -59,18 +53,13 @@ extension ViewController: Notifications {
             alertView.isHidden = false
             alertView.alertLabel.text = NSLocalizedString("Game Over", comment: "")
             anImportantUserAction(name: "GameOver")
-            victoryAction()
-            self.present(share(number: GameService.shared.getGameScore()), animated: true, completion: { [weak self] in
-                self!.anImportantUserAction(name: "SahreScore")
-                })
+            shareScore(score: nil)
         } else {
             alertView.isHidden = false
             alertView.alertLabel.text = NSLocalizedString("Victory!!", comment: "")
             anImportantUserAction(name: "Victory")
             victoryAction()
-            self.present(share(number: GameService.shared.getGameScore()), animated: true, completion: { [weak self] in
-                self!.anImportantUserAction(name: "SahreScore")
-                })
+            shareScore(score: nil)
         }
     }
 }
@@ -78,6 +67,15 @@ extension ViewController: Notifications {
 extension ViewController {
     func scoreLabel(with text: String) {
         buttonView.scoreLabel(text:text)
+    }
+    
+    fileprivate func shareScore(score: String?) {        
+        self.present(share(number: (score != nil) ? score! : String(GameService.shared.getGameScore())),
+                     animated: true,
+                     completion: { [weak self] in
+                        self!.anImportantUserAction(name: "SahreScore")
+            }
+        )
     }
 }
 
@@ -90,5 +88,9 @@ extension ViewController: BottomViewDelegate {
     
     func requestInfo() {
         self.performSegue(withIdentifier: "InfoVC", sender: nil)
+    }
+    
+    func requestShare(score: String?) {
+        shareScore(score: score)
     }
 }

@@ -12,14 +12,16 @@ import Crashlytics
 protocol BottomViewDelegate: class {
     func requestReset()
     func requestInfo()
+    func requestShare(score: String?)
 }
 
-class BottomView: UIView {
+class BottomView: UIView, UIGestureRecognizerDelegate {
     @IBOutlet private weak var scoreLabel: UILabel! {
         didSet {
             scoreLabel.text = "0"
             scoreLabel.accessibilityLabel = NSLocalizedString("access.score", comment: "")
             scoreLabel.accessibilityIdentifier = "score"
+            scoreLabel.isUserInteractionEnabled = true
         }
     }
     @IBOutlet private weak var resetButton: UIButton! {
@@ -43,6 +45,10 @@ class BottomView: UIView {
         resetButton.addTarget(self, action: #selector(resetTapped), for: .touchUpInside)
         infoButton.addTarget(self, action: #selector(infoTapped), for: .touchUpInside)
         self.scoreLabel(text: String(GameService.shared.getMaxGameScore()))
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        tap.delegate = self
+        scoreLabel.addGestureRecognizer(tap)
     }
     
     //MARK: Public
@@ -62,5 +68,10 @@ class BottomView: UIView {
         // TODO: Track the user action that is important for you.
         Answers.logContentView(withName: "Info", contentType: "Text", contentId: nil)
     }
+    
+    func handleTap() {
+       delegate?.requestShare(score: scoreLabel.text)
+    }
+    
 }
 

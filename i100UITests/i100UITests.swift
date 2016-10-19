@@ -43,8 +43,6 @@ class i100UITests: XCTestCase {
         XCTAssert(app.staticTexts["score"].exists)
         
         snapshot("0Launch")
-        
-        app.staticTexts["i100"].tap()
                 
         let collectionViewsQuery = app.collectionViews
         collectionViewsQuery.children(matching: .cell).element(boundBy: 0).otherElements.children(matching: .staticText).element.tap()
