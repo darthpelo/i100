@@ -22,3 +22,10 @@ protocol Notification {
 protocol ViewProtocol: class {
     func updateChess(at indexPath: IndexPath, with newValue: Int)
 }
+
+protocol BottomViewDelegate: class {
+    func requestReset()
+    func requestInfo()
+    func requestShare(score: String?)
+    func requestMaxScore() -> Int
+}

@@ -9,12 +9,6 @@
 import UIKit
 import Crashlytics
 
-protocol BottomViewDelegate: class {
-    func requestReset()
-    func requestInfo()
-    func requestShare(score: String?)
-}
-
 class BottomView: UIView, UIGestureRecognizerDelegate {
     @IBOutlet private weak var scoreLabel: UILabel! {
         didSet {
@@ -44,8 +38,9 @@ class BottomView: UIView, UIGestureRecognizerDelegate {
     func setupView() {
         resetButton.addTarget(self, action: #selector(resetTapped), for: .touchUpInside)
         infoButton.addTarget(self, action: #selector(infoTapped), for: .touchUpInside)
-        self.scoreLabel(text: String(GameService.shared.getMaxGameScore()))
-        
+        if let score = delegate?.requestMaxScore() {
+            self.scoreLabel(text: String(score))
+        }
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         tap.delegate = self
         scoreLabel.addGestureRecognizer(tap)

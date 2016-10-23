@@ -114,6 +114,10 @@ extension ChessBoardViewController: BottomViewDelegate {
     func requestShare(score: String?) {
         shareScore(score: score)
     }
+    
+    func requestMaxScore() -> Int {
+        return presenter.recordScore()
+    }
 }
 //MARK: - UICollectionViewDelegate UICollectionViewDataSource UICollectionViewDelegateFlowLayout
 extension ChessBoardViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
