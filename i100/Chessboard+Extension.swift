@@ -15,19 +15,112 @@ enum NotificationName: String {
     case Victory
 }
 
-extension ViewController {
+extension ChessBoardViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-}
-
-protocol Notifications {
-    func addObserver(name aName: NotificationName)
     
-    func catchNotification(notification:NSNotification)
+    func scoreLabel(with text: String) {
+        buttonView.scoreLabel(text:text)
+    }
+    
+    fileprivate func shareScore(score: String?) {
+        self.present(share(number: (score != nil) ? score! : String(presenter.actualMaxScore())),
+                     animated: true,
+                     completion: { [weak self] in
+                        self!.anImportantUserAction(name: "SahreScore")
+            }
+        )
+    }
+    
+    func anImportantUserAction(name aName: String) {
+        
+        // TODO: Move this method and customize the name and parameters to track your key metrics
+        //       Use your own string attributes to track common values over time
+        //       Use your own number attributes to track median value over time
+        Answers.logCustomEvent(withName: aName)
+    }
+    
+    func victoryAction() {
+        Answers.logLevelEnd("Level1",
+                            score: presenter.actualMaxScore() as NSNumber?,
+                            success: true,
+                            customAttributes: [:])
+    }
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+//MARK: - ViewProtocol
+extension ChessBoardViewController: ViewProtocol {
+    func updateChess(at indexPath: IndexPath, with newValue: Int) {
+        if let cell = chessboardCollectionView.cellForItem(at: indexPath) as? ChessBoardCollectionViewCell {
+            cell.setLabel(value: newValue)
+            cell.switchBackground(from: .black, to: .white)
+            if let previousCell = presenter.previousCellRow(),
+                let previous = chessboardCollectionView.cellForItem(at: IndexPath(row: previousCell, section: 0)) as? ChessBoardCollectionViewCell {
+                previous.switchBackground(from: .white, to: .black)
+            }
+        }
+        scoreLabel(with: String(presenter.recordScore()))
+        anImportantUserAction(name: "Move")
+        presenter.saveGame()
+    }
+}
+//MARK: - Notification
+extension ChessBoardViewController: Notification {
+    func addObserver(name aName: NotificationName) {
+        switch aName {
+        case .GameOver:
+            let nc = NotificationCenter.default
+            nc.addObserver(self,
+                           selector: #selector(ChessBoardViewController.catchNotification),
+                           name: NSNotification.Name(rawValue: aName.rawValue),
+                           object: nil)
+        case .Victory:
+            let nc = NotificationCenter.default
+            nc.addObserver(self,
+                           selector: #selector(ChessBoardViewController.catchNotification),
+                           name: NSNotification.Name(rawValue: aName.rawValue),
+                           object: nil)
+        }
+    }
+    
+    func catchNotification(notification:NSNotification) {
+        if notification.name.rawValue == NotificationName.GameOver.rawValue {
+            alertView.isHidden = false
+            alertView.alertLabel.text = NSLocalizedString("Game Over", comment: "")
+            anImportantUserAction(name: "GameOver")
+            shareScore(score: nil)
+        } else {
+            alertView.isHidden = false
+            alertView.alertLabel.text = NSLocalizedString("Victory!!", comment: "")
+            anImportantUserAction(name: "Victory")
+            victoryAction()
+            shareScore(score: nil)
+        }
+    }
+}
+//MARK: - BottomViewDelegate
+extension ChessBoardViewController: BottomViewDelegate {
+    func requestReset() {
+        presenter.resetGame()
+        chessboardCollectionView.reloadData()
+        alertView.isHidden = true
+    }
+    
+    func requestInfo() {
+        self.performSegue(withIdentifier: "InfoVC", sender: nil)
+    }
+    
+    func requestShare(score: String?) {
+        shareScore(score: score)
+    }
+    
+    func requestMaxScore() -> Int {
+        return presenter.recordScore()
+    }
+}
+//MARK: - UICollectionViewDelegate UICollectionViewDataSource UICollectionViewDelegateFlowLayout
+extension ChessBoardViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 100
     }
@@ -44,46 +137,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! ChessBoardCollectionViewCell
-        
-        let newValue = GameService.shared.evaluete(move: indexPath.row)
-        
-        if newValue > 0 {
-            cell.setLabel(value: newValue)
-            cell.switchBackground(from: UIColor.black, to: UIColor.white)
-            if let previousCell = GameService.shared.chessboard.previousCell {
-                let previous = collectionView.cellForItem(at: IndexPath(row: previousCell, section: 0)) as! ChessBoardCollectionViewCell
-                previous.switchBackground(from: UIColor.white, to: UIColor.black)
-            }
-            scoreLabel(with: String(GameService.shared.getMaxGameScore()))
-            anImportantUserAction(name: "Move")
-            GameService.shared.saveMatrix()
-        }
+        presenter.userDidSelectItemAt(indexPath: indexPath)
     }
 }
-
-extension ViewController {
-    func anImportantUserAction(name aName: String) {
-        
-        // TODO: Move this method and customize the name and parameters to track your key metrics
-        //       Use your own string attributes to track common values over time
-        //       Use your own number attributes to track median value over time
-        Answers.logCustomEvent(withName: aName)
-    }
-
-    func victoryAction() {
-        Answers.logLevelEnd("Level1",
-                            score: GameService.shared.getGameScore() as NSNumber?,
-                            success: true,
-                            customAttributes: [:])
-    }
-}
-
-protocol Sharable {
-    func share(number: String) -> UIViewController
-}
-
-extension ViewController: Sharable {
+//MARK: - Sharable
+extension ChessBoardViewController: Sharable {
     func share(number: String) -> UIViewController {
         let text = "Ho fatto \(number) giocando ad #i100! Prova a battermi!"
         let url = URL(string: "https://itunes.apple.com/nl/app/i100/id352554795")
