@@ -10,11 +10,13 @@
 		D91906151DA446F5002B583A /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91906131DA446E6002B583A /* SnapshotHelper.swift */; };
 		D91906161DA447E4002B583A /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B77DFB1DA3003F00909E14 /* Fabric.framework */; };
 		D91906171DA447E4002B583A /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B77DFB1DA3003F00909E14 /* Fabric.framework */; };
+		D94E427F1DBCCEB30038FFC5 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94E427E1DBCCEB30038FFC5 /* Protocols.swift */; };
+		D94E42801DBCD0060038FFC5 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94E427E1DBCCEB30038FFC5 /* Protocols.swift */; };
 		D96CB7F11D7B10E4008109E4 /* ChessBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96CB7F01D7B10E4008109E4 /* ChessBoard.swift */; };
 		D96CB7F21D7B1103008109E4 /* ChessBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96CB7F01D7B10E4008109E4 /* ChessBoard.swift */; };
 		D96CB7F31D7B1104008109E4 /* ChessBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96CB7F01D7B10E4008109E4 /* ChessBoard.swift */; };
 		D978B2A11D7AC56C00EC5301 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978B2A01D7AC56C00EC5301 /* AppDelegate.swift */; };
-		D978B2A31D7AC56C00EC5301 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978B2A21D7AC56C00EC5301 /* ViewController.swift */; };
+		D978B2A31D7AC56C00EC5301 /* ChessBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978B2A21D7AC56C00EC5301 /* ChessBoardViewController.swift */; };
 		D978B2A61D7AC56C00EC5301 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D978B2A41D7AC56C00EC5301 /* Main.storyboard */; };
 		D978B2A81D7AC56C00EC5301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D978B2A71D7AC56C00EC5301 /* Assets.xcassets */; };
 		D978B2AB1D7AC56C00EC5301 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D978B2A91D7AC56C00EC5301 /* LaunchScreen.storyboard */; };
@@ -23,8 +25,8 @@
 		D978B2D21D7AC72200EC5301 /* Chessboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978B2D11D7AC72200EC5301 /* Chessboard+Extension.swift */; };
 		D978B2D31D7AC72200EC5301 /* Chessboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978B2D11D7AC72200EC5301 /* Chessboard+Extension.swift */; };
 		D978B2D41D7AC72200EC5301 /* Chessboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978B2D11D7AC72200EC5301 /* Chessboard+Extension.swift */; };
-		D978B2D51D7AC7FC00EC5301 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978B2A21D7AC56C00EC5301 /* ViewController.swift */; };
-		D978B2D61D7AC7FC00EC5301 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978B2A21D7AC56C00EC5301 /* ViewController.swift */; };
+		D978B2D51D7AC7FC00EC5301 /* ChessBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978B2A21D7AC56C00EC5301 /* ChessBoardViewController.swift */; };
+		D978B2D61D7AC7FC00EC5301 /* ChessBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978B2A21D7AC56C00EC5301 /* ChessBoardViewController.swift */; };
 		D97F3BE61D99CD5A00200C56 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F3BE51D99CD5A00200C56 /* InfoViewController.swift */; };
 		D97F3BE81D99CD6F00200C56 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F3BE71D99CD6F00200C56 /* InfoViewModel.swift */; };
 		D9A09D111DAADF6800D9CE7C /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A09D101DAADF6800D9CE7C /* AlertView.swift */; };
@@ -68,10 +70,11 @@
 		D91905FE1DA433F9002B583A /* it */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = it; path = it.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D91905FF1DA433F9002B583A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D91906131DA446E6002B583A /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		D94E427E1DBCCEB30038FFC5 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		D96CB7F01D7B10E4008109E4 /* ChessBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessBoard.swift; sourceTree = "<group>"; };
 		D978B29D1D7AC56C00EC5301 /* i100.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = i100.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D978B2A01D7AC56C00EC5301 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D978B2A21D7AC56C00EC5301 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D978B2A21D7AC56C00EC5301 /* ChessBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardViewController.swift; sourceTree = "<group>"; };
 		D978B2A71D7AC56C00EC5301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D978B2AA1D7AC56C00EC5301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D978B2AC1D7AC56C00EC5301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,6 +129,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D94E427D1DBCCE9D0038FFC5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D94E427E1DBCCEB30038FFC5 /* Protocols.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		D94E42811DBCD0430038FFC5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D978B2D11D7AC72200EC5301 /* Chessboard+Extension.swift */,
+				D9B66CA71D7DB9C80023A855 /* UIViewExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		D96CB7EF1D7B10C0008109E4 /* Model Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,12 +180,13 @@
 		D978B29F1D7AC56C00EC5301 /* i100 */ = {
 			isa = PBXGroup;
 			children = (
+				D978B2A01D7AC56C00EC5301 /* AppDelegate.swift */,
+				D94E427D1DBCCE9D0038FFC5 /* Protocols */,
 				D91906131DA446E6002B583A /* SnapshotHelper.swift */,
 				D978B2CE1D7AC6F100EC5301 /* Chessboard */,
 				D97F3BE31D99CD3300200C56 /* Info */,
 				D96CB7EF1D7B10C0008109E4 /* Model Layer */,
-				D978B2A01D7AC56C00EC5301 /* AppDelegate.swift */,
-				D9B66CA71D7DB9C80023A855 /* UIViewExtensions.swift */,
+				D94E42811DBCD0430038FFC5 /* Extensions */,
 				D978B2A41D7AC56C00EC5301 /* Main.storyboard */,
 				D978B2A91D7AC56C00EC5301 /* LaunchScreen.storyboard */,
 				D978B2A71D7AC56C00EC5301 /* Assets.xcassets */,
@@ -205,8 +226,7 @@
 		D978B2CF1D7AC6FA00EC5301 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D978B2A21D7AC56C00EC5301 /* ViewController.swift */,
-				D978B2D11D7AC72200EC5301 /* Chessboard+Extension.swift */,
+				D978B2A21D7AC56C00EC5301 /* ChessBoardViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -394,8 +414,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D97F3BE81D99CD6F00200C56 /* InfoViewModel.swift in Sources */,
-				D978B2A31D7AC56C00EC5301 /* ViewController.swift in Sources */,
+				D978B2A31D7AC56C00EC5301 /* ChessBoardViewController.swift in Sources */,
 				D96CB7F11D7B10E4008109E4 /* ChessBoard.swift in Sources */,
+				D94E427F1DBCCEB30038FFC5 /* Protocols.swift in Sources */,
 				D9A09D111DAADF6800D9CE7C /* AlertView.swift in Sources */,
 				D9B66CA81D7DB9C80023A855 /* UIViewExtensions.swift in Sources */,
 				D9A5DAB61D7B77A7007DAF93 /* GameService.swift in Sources */,
@@ -412,10 +433,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9E7208B1D7CAB2E0058EEF1 /* ChessBoardCollectionViewCell.swift in Sources */,
-				D978B2D51D7AC7FC00EC5301 /* ViewController.swift in Sources */,
+				D978B2D51D7AC7FC00EC5301 /* ChessBoardViewController.swift in Sources */,
 				D9F07C661DB6B6BA00E23FBA /* AlertView.swift in Sources */,
 				D96CB7F21D7B1103008109E4 /* ChessBoard.swift in Sources */,
 				D9E7208F1D7CBDEC0058EEF1 /* BottomView.swift in Sources */,
+				D94E42801DBCD0060038FFC5 /* Protocols.swift in Sources */,
 				D9A5DAB71D7B77A7007DAF93 /* GameService.swift in Sources */,
 				D9A5DABA1D7B77C6007DAF93 /* gameServiceTests.swift in Sources */,
 				D978B2B61D7AC56C00EC5301 /* chessBoardTests.swift in Sources */,
@@ -427,7 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D978B2D61D7AC7FC00EC5301 /* ViewController.swift in Sources */,
+				D978B2D61D7AC7FC00EC5301 /* ChessBoardViewController.swift in Sources */,
 				D96CB7F31D7B1104008109E4 /* ChessBoard.swift in Sources */,
 				D9F07C671DB6B6BB00E23FBA /* AlertView.swift in Sources */,
 				D9A5DAB81D7B77A7007DAF93 /* GameService.swift in Sources */,
